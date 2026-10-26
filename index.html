@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sowmiya · Product Designer & Creative Developer</title>
+  <meta name="description" content="Portfolio of Sowmiya, Product Designer & Creative Developer specializing in thoughtful UX research, wireframing, interactive prototypes, and design systems.">
+  <meta property="og:title" content="Sowmiya · Product Designer & Creative Developer">
+  <meta property="og:description" content="I design digital experiences that feel alive. Explore case studies from Park Share to BookMyTrainer.">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" type="image/png" href="assets/images/avatar.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <header class="navbar-container">
+    <a href="#top" class="nav-brand-capsule" aria-label="Sowmiya Home">
+      <div class="avatar-wrapper">
+        <img src="assets/images/avatar.png" alt="Sowmiya Avatar">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Sowmiya</span>
+        <span class="brand-title">Product Designer &amp; Creative Developer</span>
+      </div>
+    </a>
+
+    <nav class="nav-links-capsule" id="navLinksCapsule">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#wireframe-hifi" class="nav-link">Wireframe vs Hi-Fi</a>
+      <a href="#approach" class="nav-link">UX Research</a>
+      <a href="#toolkit" class="nav-link">Toolkit</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="assets/images/avatar.png" target="_blank" class="nav-link nav-resume-btn" download>Resume ↓</a>
+    </nav>
+
+    <button class="nav-mobile-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="top">
+    <section class="hero-section">
+      <div class="hero-ambient-haze"></div>
+      
+      <!-- Floating Dandelion Seeds Particle Canvas -->
+      <canvas id="heroFxCanvas" class="hero-canvas"></canvas>
+
+      <!-- Hero Typography Header -->
+      <div class="hero-copy-wrapper">
+        <h1 class="hero-headline">
+          I design digital <br>
+          experiences that <span class="highlight-word">feel alive</span>.
+        </h1>
+        <p class="hero-subhead">
+          Product designer and creative developer exploring thoughtful UX, interactive wireframes, and playful digital products. From <strong>Park Share</strong> to <strong>BookMyTrainer</strong>, I turn complex problems into experiences people love to use.
+        </p>
+      </div>
+
+      <!-- Hero Interactive Desk Illustration Stage -->
+      <div class="hero-stage-container">
+        <div class="hero-stage-card" id="heroStageCard">
+          <img src="assets/images/hero_studio.png" alt="Sowmiya UX Design Studio" class="hero-stage-img">
+
+          <!-- Interactive Hotspots Layer -->
+          <div class="hotspots-layer"></div>
+
+          <!-- Figma-Style Frame Selection Box with 4 Handles & Label Badge -->
+          <div class="figma-selection-frame" id="figmaSelectionFrame">
+            <span class="sel-handle tl"></span>
+            <span class="sel-handle tr"></span>
+            <span class="sel-handle bl"></span>
+            <span class="sel-handle br"></span>
+            <div class="sel-label-badge" id="selLabelBadge">
+              <span class="badge-icon">💻</span>
+              <span class="badge-text">Laptop • Park Share Live Prototype</span>
+              <span class="badge-tag">Prototype</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Hint / Scroll Capsule -->
+      <a href="#work" class="hero-hint-capsule" aria-label="Scroll down to selected work">
+        <span class="mouse-scroll-indicator"></span>
+        <span>Scroll into my work</span>
+        <span class="hero-hint-jump">or jump to projects ↓</span>
+      </a>
+    </section>
+
+    <!-- Section 1: Selected Work & Case Studies -->
+    <section class="section-wrapper" id="work">
+      <div class="section-header">
+        <span class="section-tag">SELECTED CASE STUDIES</span>
+        <h2 class="section-title">Designed with empathy, shipped with craft</h2>
+        <p class="section-desc">
+          Featured projects combining qualitative user research, low-fidelity wireframing, and production design systems.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Park Share -->
+        <article class="project-card featured" id="case-park-share">
+          <div class="project-visual">
+            <img src="assets/images/park_share.jpg" alt="Park Share Mobile UX Mockup">
+            <span class="project-visual-badge">✦ Interactive Prototype Ready</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta-tags">
+              <span class="tag-pill accent">Lead UX Designer</span>
+              <span class="tag-pill">iOS / Android</span>
+              <span class="tag-pill">24 User Interviews</span>
+            </div>
+            <h3 class="project-title">Park Share — Smart Urban Parking &amp; Host Sharing Platform</h3>
+            <p class="project-tagline">
+              Connecting urban commuters with verified private parking bays, eliminating circling anxiety while empowering hosts to monetize unused driveways.
+            </p>
+            <div class="project-metrics-row">
+              <div class="metric-item">
+                <span class="metric-value">+34%</span>
+                <span class="metric-label">Reservation Speed</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">94%</span>
+                <span class="metric-label">Task Success Rate</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">4.8★</span>
+                <span class="metric-label">Beta Satisfaction</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn-primary" data-open-case="park_share">Read Case Study →</button>
+              <a href="#wireframe-hifi" class="btn-secondary">View Wireframes</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: BookMyTrainer -->
+        <article class="project-card col-6" id="case-book-trainer">
+          <div class="project-visual">
+            <img src="assets/images/book_trainer.jpg" alt="BookMyTrainer App Mockup">
+            <span class="project-visual-badge">✦ Heuristic Optimization</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta-tags">
+              <span class="tag-pill accent">End-to-End Product Design</span>
+              <span class="tag-pill">Booking Funnel</span>
+            </div>
+            <h3 class="project-title">BookMyTrainer — Personal Fitness Matchmaking</h3>
+            <p class="project-tagline">
+              Eliminating gym intimidation with algorithmic trainer matching, calendar booking, and personalized workout progress tracking.
+            </p>
+            <div class="project-metrics-row">
+              <div class="metric-item">
+                <span class="metric-value">42%</span>
+                <span class="metric-label">Higher Match Rate</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">180</span>
+                <span class="metric-label">Athletes Surveyed</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn-primary" data-open-case="book_trainer">Read Case Study →</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Echo Mindfulness Research Board -->
+        <article class="project-card col-6" id="case-echo-research">
+          <div class="project-visual">
+            <img src="assets/images/wireframe_process.jpg" alt="Echo Mindfulness UX Research Process Board">
+            <span class="project-visual-badge">✦ UX Research &amp; Wireframes</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta-tags">
+              <span class="tag-pill accent">UX Research &amp; Affinity Mapping</span>
+              <span class="tag-pill">Diary Study</span>
+            </div>
+            <h3 class="project-title">Echo — Mindfulness &amp; Habit UX Research Process</h3>
+            <p class="project-tagline">
+              A comprehensive discovery study synthesizing 120+ user pain points into low-fidelity task wireframes and validated user personas.
+            </p>
+            <div class="project-metrics-row">
+              <div class="metric-item">
+                <span class="metric-value">88%</span>
+                <span class="metric-label">Daily Retention</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">14 Days</span>
+                <span class="metric-label">Diary Study</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn-primary" data-open-case="wireframe_process">Explore Board →</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 2: Wireframe vs High-Fidelity Split Comparison -->
+    <section class="section-wrapper" id="wireframe-hifi">
+      <div class="section-header">
+        <span class="section-tag">WIREFRAME TO HIGH-FIDELITY</span>
+        <h2 class="section-title">From architecture blueprint to polished interface</h2>
+        <p class="section-desc">
+          Drag the interactive slider below to inspect how low-fidelity information hierarchy evolves into production design tokens and component systems.
+        </p>
+      </div>
+
+      <div class="wireframe-showcase-container">
+        <!-- Controls Header -->
+        <div class="split-viewer-header">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 14px; font-weight: 700; color: var(--ink-900);">Interactive Comparison Viewer</span>
+            <span style="font-size: 12px; color: var(--ink-500);">(Drag slider handle)</span>
+          </div>
+          <div class="split-controls-pills">
+            <button class="split-btn" data-mode="wireframe">Wireframe Only</button>
+            <button class="split-btn active" data-mode="split">50 / 50 Split</button>
+            <button class="split-btn" data-mode="hifi">High Fidelity UI</button>
+          </div>
+        </div>
+
+        <!-- Comparison Slider Box -->
+        <div class="comparison-slider-box" id="comparisonSlider">
+          <!-- Wireframe Layer (Base) -->
+          <div class="slider-layer wireframe-layer">
+            <img src="assets/images/wireframe_process.jpg" alt="Low-Fidelity Wireframe Blueprint">
+            <span class="layer-badge-floating right-badge">📐 Low-Fi Wireframe &amp; Layout Grids</span>
+          </div>
+
+          <!-- High-Fidelity Layer (Top with Clip Path) -->
+          <div class="slider-layer hifi-layer">
+            <img src="assets/images/park_share.jpg" alt="High-Fidelity Finished UI Screens">
+            <span class="layer-badge-floating left-badge">📱 High-Fidelity Finished Screens</span>
+          </div>
+
+          <!-- Divider Line and Knob -->
+          <div class="slider-divider-line"></div>
+          <div class="slider-handle-knob">⇄</div>
+        </div>
+
+        <!-- Slider Insights Grid -->
+        <div class="slider-insights-grid">
+          <div class="insight-card">
+            <h4><span>📐</span> Information Hierarchy</h4>
+            <p>Greyscale wireframing tests whether primary calls-to-action align with natural eye scanning patterns (F-pattern and Z-pattern) before color decisions are introduced.</p>
+          </div>
+          <div class="insight-card">
+            <h4><span>🎨</span> WCAG AAA Contrast</h4>
+            <p>All button states, status badges, and typography pass strict 4.5:1 to 7:1 color contrast ratios, ensuring legibility across bright outdoor conditions.</p>
+          </div>
+          <div class="insight-card">
+            <h4><span>⚡</span> Progressive Disclosure</h4>
+            <p>Complex booking calculations are revealed gradually through modal bottom sheets to prevent cognitive overload during time-sensitive tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: UX Research & Discovery Framework -->
+    <section class="section-wrapper" id="approach">
+      <div class="section-header">
+        <span class="section-tag">UX RESEARCH &amp; METHODOLOGY</span>
+        <h2 class="section-title">The framework behind every design decision</h2>
+        <p class="section-desc">
+          Rooted in cognitive empathy, iterative prototyping, and continuous user validation.
+        </p>
+      </div>
+
+      <!-- 5-Step Process Cards -->
+      <div class="ux-process-grid">
+        <div class="process-step-card">
+          <span class="step-num">STAGE 01</span>
+          <h3 class="step-title">Discover</h3>
+          <p class="step-desc">Uncovering unarticulated user frustrations through generative interviews and contextual inquiry.</p>
+          <ul class="step-artifacts">
+            <li>1-on-1 User Interviews</li>
+            <li>14-Day Diary Studies</li>
+            <li>Competitive Benchmarking</li>
+          </ul>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-num">STAGE 02</span>
+          <h3 class="step-title">Synthesize</h3>
+          <p class="step-desc">Transforming messy qualitative notes into clear mental models, personas, and task journeys.</p>
+          <ul class="step-artifacts">
+            <li>Affinity Mapping</li>
+            <li>Empathy &amp; Persona Profiles</li>
+            <li>How-Might-We Statements</li>
+          </ul>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-num">STAGE 03</span>
+          <h3 class="step-title">Wireframe</h3>
+          <p class="step-desc">Mapping architectural flows, navigation hierarchy, and low-fidelity paper blueprints.</p>
+          <ul class="step-artifacts">
+            <li>Paper Wireframe Sketches</li>
+            <li>Information Architecture</li>
+            <li>Clickable Greyscale Flows</li>
+          </ul>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-num">STAGE 04</span>
+          <h3 class="step-title">Prototype</h3>
+          <p class="step-desc">Building dynamic interactive prototypes with realistic variables, states, and micro-interactions.</p>
+          <ul class="step-artifacts">
+            <li>Figma Component Variants</li>
+            <li>Coded Prototypes (JS/CSS)</li>
+            <li>Usability Benchmarking</li>
+          </ul>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-num">STAGE 05</span>
+          <h3 class="step-title">Deliver</h3>
+          <p class="step-desc">Packaging design tokens, WCAG specs, and engineering handoff documentation for frictionless shipping.</p>
+          <ul class="step-artifacts">
+            <li>Design System Tokens</li>
+            <li>Accessibility Audits</li>
+            <li>Post-Launch Analytics</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interactive Affinity Mapping Board -->
+      <div class="affinity-board-card">
+        <div class="affinity-board-header">
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900);">Synthesized Affinity Board (Park Share Discovery)</h3>
+            <p style="font-size: 13.5px; color: var(--ink-500); margin-top: 4px;">Click filters to view categorized user quotes and insights from 24 interview sessions.</p>
+          </div>
+          <div class="affinity-filters">
+            <button class="affinity-pill-btn active" data-filter="all">All Notes (8)</button>
+            <button class="affinity-pill-btn" data-filter="pain">Pain Points</button>
+            <button class="affinity-pill-btn" data-filter="need">User Needs</button>
+            <button class="affinity-pill-btn" data-filter="opportunity">Opportunities</button>
+          </div>
+        </div>
+
+        <div class="sticky-notes-wall">
+          <div class="sticky-note yellow" data-category="pain">
+            <div class="sticky-tag">Pain Point • Commuter</div>
+            <p>“I hate arriving at a garage only to discover clearance is under 6'2" or all spots are reserved. It doubles my stress before client meetings.”</p>
+          </div>
+
+          <div class="sticky-note coral" data-category="need">
+            <div class="sticky-tag">User Need • Commuter</div>
+            <p>“Show me exact walking distance in minutes from the parking spot to my destination pin, not just straight-line bird flight distance.”</p>
+          </div>
+
+          <div class="sticky-note blue" data-category="opportunity">
+            <div class="sticky-tag">Opportunity • Business</div>
+            <p>“Host driveway monetization: If residential hosts can set an automated calendar for work hours (9 AM - 5 PM), supply jumps by 64%.”</p>
+          </div>
+
+          <div class="sticky-note green" data-category="pain">
+            <div class="sticky-tag">Pain Point • Host</div>
+            <p>“I worry about unauthorized cars overstaying their booked window. I need instant host notification and an overstay fee mechanism.”</p>
+          </div>
+
+          <div class="sticky-note yellow" data-category="need">
+            <div class="sticky-tag">User Need • Accessibility</div>
+            <p>“Filter by EV charging stations and ground-level wheelchair accessible bays right on the main map filter drawer.”</p>
+          </div>
+
+          <div class="sticky-note coral" data-category="opportunity">
+            <div class="sticky-tag">Opportunity • UX Flow</div>
+            <p>“1-Tap Apple Pay / Google Pay checkout: Drivers booking on the move cannot manually type 16 credit card digits safely.”</p>
+          </div>
+
+          <div class="sticky-note green" data-category="pain">
+            <div class="sticky-tag">Pain Point • Trust</div>
+            <p>“Photos of the parking entrance are crucial. If the alley looks sketchy or narrow, I cancel immediately.”</p>
+          </div>
+
+          <div class="sticky-note blue" data-category="need">
+            <div class="sticky-tag">User Need • Real-Time</div>
+            <p>“Turn-by-turn navigation link straight into Google Maps or Waze once reservation is confirmed with single tap.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Design System Toolkit -->
+    <section class="section-wrapper" id="toolkit">
+      <div class="section-header">
+        <span class="section-tag">DESIGN SYSTEM &amp; TOOLKIT</span>
+        <h2 class="section-title">Tokens, tooling &amp; technical craft</h2>
+        <p class="section-desc">
+          Building resilient design systems bridging Figma auto-layout and production code.
+        </p>
+      </div>
+
+      <div class="toolkit-container">
+        <!-- Color Tokens Palette -->
+        <div class="token-palette-card">
+          <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900);">Color System &amp; Accessibility</h3>
+          <p style="font-size: 13.5px; color: var(--ink-500); margin-top: 4px;">Tailored HSL tokens engineered for WCAG AAA contrast ratio compliance.</p>
+
+          <div class="color-swatch-list">
+            <div class="swatch-row">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="swatch-color-box" style="background: #e0774f;"></div>
+                <span class="swatch-name">Coral Accent</span>
+              </div>
+              <span class="swatch-code">#E0774F</span>
+              <span class="swatch-contrast">AAA Pass</span>
+            </div>
+
+            <div class="swatch-row">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="swatch-color-box" style="background: #1b2024;"></div>
+                <span class="swatch-name">Deep Canvas Ink</span>
+              </div>
+              <span class="swatch-code">#1B2024</span>
+              <span class="swatch-contrast">14.8:1 Ratio</span>
+            </div>
+
+            <div class="swatch-row">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="swatch-color-box" style="background: #fbf7f2; border: 1px solid #e0d8ce;"></div>
+                <span class="swatch-name">Parchment White</span>
+              </div>
+              <span class="swatch-code">#FBF7F2</span>
+              <span class="swatch-contrast">Base Layer</span>
+            </div>
+
+            <div class="swatch-row">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="swatch-color-box" style="background: #0d99ff;"></div>
+                <span class="swatch-name">Figma Blue Focus</span>
+              </div>
+              <span class="swatch-code">#0D99FF</span>
+              <span class="swatch-contrast">Interactive</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Software Grid -->
+        <div class="tools-grid">
+          <div class="tool-item">
+            <div class="tool-icon-name">
+              <span class="tool-icon">🎨</span>
+              <h4 class="tool-name">Figma &amp; FigJam</h4>
+            </div>
+            <p class="tool-usage">Advanced auto-layout, nested component variants, design tokens via Figma Variables, and collaborative affinity mapping boards.</p>
+          </div>
+
+          <div class="tool-item">
+            <div class="tool-icon-name">
+              <span class="tool-icon">🔍</span>
+              <h4 class="tool-name">Dovetail &amp; UserTesting</h4>
+            </div>
+            <p class="tool-usage">Qualitative interview tagging, transcript analysis, usability task benchmarking, and SUS (System Usability Scale) scoring.</p>
+          </div>
+
+          <div class="tool-item">
+            <div class="tool-icon-name">
+              <span class="tool-icon">⚡</span>
+              <h4 class="tool-name">Interactive Prototyping</h4>
+            </div>
+            <p class="tool-usage">Framer, ProtoPie, and code-based prototypes (HTML/CSS/JS) to test micro-interactions with real touch gestures and spring physics.</p>
+          </div>
+
+          <div class="tool-item">
+            <div class="tool-icon-name">
+              <span class="tool-icon">💻</span>
+              <h4 class="tool-name">Creative Development</h4>
+            </div>
+            <p class="tool-usage">Semantic HTML5, CSS Grid/Flexbox, JavaScript ES6+, responsive performance, and clean developer handoff documentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: About Sowmiya -->
+    <section class="section-wrapper" id="about">
+      <div class="about-grid">
+        <div class="about-photo-card">
+          <img src="assets/images/hero_studio.png" alt="Sowmiya Product Designer">
+          <div class="about-floating-card">
+            <h4>Sowmiya · Product Designer</h4>
+            <p>Dedicated to crafting thoughtful UX that turns complex workflows into intuitive journeys.</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">ABOUT ME</span>
+          <h3>Bridging the gap between human empathy and code craft</h3>
+          <p class="about-bio-paragraph">
+            Hello! I’m Sowmiya, a product designer and creative developer with a passion for designing digital experiences that feel lively, intuitive, and frictionless.
+          </p>
+          <p class="about-bio-paragraph">
+            My background combines rigorous qualitative UX research — interviewing real commuters, athletes, and stakeholders — with pixel-perfect visual execution. I believe the best interfaces aren't just aesthetically pleasing; they eliminate cognitive clutter and anticipate user needs before they arise.
+          </p>
+
+          <div class="about-quote-box">
+            “Good design isn’t about adding until nothing more can be added; it’s about refining until nothing essential can be taken away.”
+          </div>
+
+          <div style="display: flex; gap: 24px; margin-top: 24px;">
+            <div>
+              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">8+</span>
+              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">Shipped Projects</p>
+            </div>
+            <div>
+              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">180+</span>
+              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">User Research Hours</p>
+            </div>
+            <div>
+              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">94%</span>
+              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">Avg. Usability Score</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Contact & Footer -->
+    <section class="contact-section" id="contact">
+      <div class="contact-box-card">
+        <span class="section-tag">LET'S CONNECT</span>
+        <h2 class="contact-title">Have an exciting idea or UX challenge?</h2>
+        <p class="contact-desc">
+          I’m currently available for product design roles, UX research consulting, and creative collaborations.
+        </p>
+
+        <div class="email-copy-bar">
+          <span class="email-address-text">sowmiya.design@gmail.com</span>
+          <button class="copy-email-btn" id="copyEmailBtn">Copy Email <span>📋</span></button>
+        </div>
+
+        <div class="social-links-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn">LinkedIn ↗</a>
+          <a href="https://figma.com" target="_blank" rel="noopener" class="social-btn">Figma Community ↗</a>
+          <a href="https://dribbble.com" target="_blank" rel="noopener" class="social-btn">Dribbble ↗</a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-btn">GitHub ↗</a>
+        </div>
+      </div>
+
+      <footer class="footer-bottom-bar">
+        <span>© 2026 Sowmiya · Crafted with care &amp; Figma spirit ♡</span>
+        <a href="#top" style="color: var(--coral); font-weight: 600; text-decoration: none;">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Case Study Deep-Dive Modal Drawer -->
+  <div class="case-modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-label="Case Study Deep Dive">
+    <div class="case-modal-container">
+      <button class="modal-close-btn" aria-label="Close Case Study">&times;</button>
+      <div class="modal-content-body">
+        <!-- Dynamically injected via js/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
