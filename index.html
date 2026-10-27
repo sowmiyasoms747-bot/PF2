@@ -47,14 +47,16 @@
 
   <!-- Hero Section -->
   <main id="top">
-    <section class="hero-section">
-      <div class="hero-ambient-haze"></div>
+    <section class="hero-section" id="heroSection">
+      <!-- Full-bleed ambient blurred backdrop extending the studio atmosphere -->
+      <div class="hero-ambient-backdrop" aria-hidden="true"></div>
+      <div class="hero-ambient-haze" aria-hidden="true"></div>
       
       <!-- Floating Dandelion Seeds Particle Canvas -->
       <canvas id="heroFxCanvas" class="hero-canvas"></canvas>
 
-      <!-- Hero Typography Header -->
-      <div class="hero-copy-wrapper">
+      <!-- Hero Typography Header with Parallax -->
+      <div class="hero-copy-wrapper" id="heroCopy">
         <h1 class="hero-headline">
           I design digital <br>
           experiences that <span class="highlight-word">feel alive</span>.
@@ -64,10 +66,10 @@
         </p>
       </div>
 
-      <!-- Hero Interactive Desk Illustration Stage -->
-      <div class="hero-stage-container">
+      <!-- Hero Interactive Desk Illustration Stage (Full coverage, No Crop, with Parallax) -->
+      <div class="hero-stage-container" id="heroStageContainer">
         <div class="hero-stage-card" id="heroStageCard">
-          <img src="assets/images/hero_studio.png" alt="Sowmiya UX Design Studio" class="hero-stage-img">
+          <img src="assets/images/hero_studio.png" alt="Sowmiya UX Design Studio" class="hero-stage-img" id="heroStageImg">
 
           <!-- Interactive Hotspots Layer -->
           <div class="hotspots-layer"></div>
@@ -88,7 +90,7 @@
       </div>
 
       <!-- Bottom Hint / Scroll Capsule -->
-      <a href="#work" class="hero-hint-capsule" aria-label="Scroll down to selected work">
+      <a href="#work" class="hero-hint-capsule" id="heroHint" aria-label="Scroll down to selected work">
         <span class="mouse-scroll-indicator"></span>
         <span>Scroll into my work</span>
         <span class="hero-hint-jump">or jump to projects ↓</span>

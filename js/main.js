@@ -815,13 +815,85 @@
   }
 
   // =========================================================================
-  // 9. Initialization
+  // 9. Hero Parallax Scrolling & 3D Interactive Motion
+  // =========================================================================
+  function initParallax() {
+    const heroSection = document.getElementById('heroSection');
+    const heroCard = document.getElementById('heroStageCard');
+    const heroCopy = document.getElementById('heroCopy');
+    const heroHint = document.getElementById('heroHint');
+    const heroBackdrop = document.querySelector('.hero-ambient-backdrop');
+
+    if (!heroSection || !heroCard) return;
+
+    let targetTiltX = 0, targetTiltY = 0;
+    let currentTiltX = 0, currentTiltY = 0;
+
+    // Subtle 3D mouse parallax following cursor
+    window.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      if (rect.bottom < 0) return;
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      targetTiltX = (e.clientX - cx) / cx;
+      targetTiltY = (e.clientY - cy) / cy;
+    }, { passive: true });
+
+    function updateParallax() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const heroHeight = heroSection.offsetHeight;
+
+      // Smooth mouse tilt interpolation
+      currentTiltX += (targetTiltX - currentTiltX) * 0.08;
+      currentTiltY += (targetTiltY - currentTiltY) * 0.08;
+
+      if (scrollY <= heroHeight * 1.3) {
+        const progress = Math.min(1, Math.max(0, scrollY / heroHeight));
+
+        // 1. Copy lifts up and fades out smoothly
+        if (heroCopy) {
+          const liftY = scrollY * 0.72;
+          const opacity = Math.max(0, 1 - progress * 2.2);
+          heroCopy.style.transform = `translate3d(0, -${liftY}px, 0)`;
+          heroCopy.style.opacity = opacity.toFixed(3);
+        }
+
+        // 2. Hint capsule fades out
+        if (heroHint) {
+          const hintOpacity = Math.max(0, 1 - progress * 3.5);
+          heroHint.style.opacity = hintOpacity.toFixed(3);
+        }
+
+        // 3. Ambient blurred backdrop drifts at slower depth speed
+        if (heroBackdrop) {
+          const bgY = scrollY * 0.22;
+          heroBackdrop.style.transform = `scale(1.1) translate3d(0, ${bgY}px, 0)`;
+        }
+
+        // 4. Studio stage card moves with parallax depth and subtle scale
+        const cardParallaxY = scrollY * 0.35;
+        const cardScale = 1 + progress * 0.08;
+        const tiltDegX = -currentTiltY * 2.2;
+        const tiltDegY = currentTiltX * 3.2;
+
+        heroCard.style.transform = `translate3d(0, ${cardParallaxY}px, 0) scale(${cardScale}) rotateX(${tiltDegX}deg) rotateY(${tiltDegY}deg)`;
+      }
+
+      requestAnimationFrame(updateParallax);
+    }
+
+    requestAnimationFrame(updateParallax);
+  }
+
+  // =========================================================================
+  // 10. Initialization
   // =========================================================================
   document.addEventListener('DOMContentLoaded', () => {
     initHotspots();
     initCanvas();
     initSplitSlider();
     initAffinityBoard();
+    initParallax();
   });
 
 })();
