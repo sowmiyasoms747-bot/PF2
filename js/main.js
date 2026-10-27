@@ -29,7 +29,7 @@
       name: 'System Monitor • Wireframe Flow',
       tag: 'Wireframe',
       icon: '📐',
-      x: 0.575, y: 0.220, w: 0.200, h: 0.265,
+      x: 0.590, y: 0.235, w: 0.170, h: 0.250,
       zIndex: 22,
       pulseX: 0.67, pulseY: 0.34,
       pop: 'Wireframe user flows: 6 alternate navigation paths tested',
@@ -41,9 +41,9 @@
       name: 'System Monitor • High-Fidelity UI Screens',
       tag: 'High Fidelity',
       icon: '📱',
-      x: 0.775, y: 0.220, w: 0.205, h: 0.265,
+      x: 0.760, y: 0.235, w: 0.195, h: 0.250,
       zIndex: 22,
-      pulseX: 0.87, pulseY: 0.34,
+      pulseX: 0.86, pulseY: 0.34,
       pop: 'Polished screens with WCAG AAA accessibility tokens',
       action: 'case',
       target: 'book_trainer'
@@ -54,9 +54,9 @@
       name: 'Laptop • Park Share Live Prototype',
       tag: 'Live Prototype',
       icon: '💻',
-      x: 0.400, y: 0.495, w: 0.470, h: 0.340,
+      x: 0.440, y: 0.505, w: 0.430, h: 0.335,
       zIndex: 25,
-      pulseX: 0.63, pulseY: 0.65,
+      pulseX: 0.65, pulseY: 0.66,
       pop: 'Figma interactive prototype: real-time spot reservations',
       action: 'case',
       target: 'park_share'
@@ -250,8 +250,37 @@
 
   let activeHotspotEl = null;
 
+  function updateHotspotsLayerRect() {
+    if (!hotspotsLayer || !stageCard) return;
+    const W = stageCard.clientWidth;
+    const H = stageCard.clientHeight;
+    if (!W || !H) return;
+    const AR = 1536 / 1024;
+    let imgW, imgH, imgLeft, imgTop;
+    if (W / H > AR) {
+      imgW = W;
+      imgH = W / AR;
+      imgLeft = 0;
+      imgTop = (H - imgH) * 0.38; // matching CSS object-position: center 38%
+    } else {
+      imgH = H;
+      imgW = H * AR;
+      imgTop = 0;
+      imgLeft = (W - imgW) * 0.5;
+    }
+    hotspotsLayer.style.position = 'absolute';
+    hotspotsLayer.style.left = imgLeft + 'px';
+    hotspotsLayer.style.top = imgTop + 'px';
+    hotspotsLayer.style.width = imgW + 'px';
+    hotspotsLayer.style.height = imgH + 'px';
+    hotspotsLayer.style.right = 'auto';
+    hotspotsLayer.style.bottom = 'auto';
+  }
+
   function initHotspots() {
     if (!hotspotsLayer || !stageCard) return;
+
+    updateHotspotsLayerRect();
 
     // Clear existing
     hotspotsLayer.innerHTML = '';
@@ -318,6 +347,7 @@
 
     // Re-adjust frame position on window resize
     window.addEventListener('resize', () => {
+      updateHotspotsLayerRect();
       if (activeHotspotEl) {
         const spot = HOTSPOTS.find(h => h.id === activeHotspotEl.dataset.id);
         if (spot) updateSelectionPosition(activeHotspotEl, spot);

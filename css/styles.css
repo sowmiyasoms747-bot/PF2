@@ -284,12 +284,12 @@ body {
 
 .hero-copy-wrapper {
   position: absolute;
-  top: clamp(65px, 8.5vh, 85px);
+  top: clamp(16px, 2.5vh, 26px);
   left: 20px;
   right: 20px;
   z-index: 5;
   text-align: center;
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 auto;
   pointer-events: none;
   will-change: transform, opacity;
@@ -302,12 +302,12 @@ body {
 
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 44px);
+  font-size: clamp(22px, 2.3vw, 36px);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--ink-900);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   text-shadow: 0 2px 20px rgba(255, 255, 255, 0.95), 0 0 35px rgba(255, 255, 255, 0.85);
 }
 
@@ -330,11 +330,11 @@ body {
 }
 
 .hero-subhead {
-  font-size: clamp(13px, 0.95vw, 15px);
+  font-size: clamp(12px, 0.85vw, 13.5px);
   color: var(--ink-800);
-  max-width: 650px;
+  max-width: 580px;
   margin: 0 auto;
-  line-height: 1.45;
+  line-height: 1.4;
   font-weight: 500;
   text-shadow: 0 1px 16px rgba(255, 255, 255, 0.95), 0 0 25px rgba(255, 255, 255, 0.85);
 }
@@ -365,15 +365,14 @@ body {
 
 .hero-stage-card {
   position: relative;
-  width: min(96vw, calc((100vh - 40px) * 1.5));
-  height: min(calc(96vw / 1.5), calc(100vh - 40px));
-  aspect-ratio: 1536 / 1024;
+  width: min(95vw, 1320px);
+  height: min(calc(100vh - 44px), 590px);
   margin: 0 auto;
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: 
     0 25px 70px -10px rgba(90, 45, 25, 0.35),
     0 0 0 1px rgba(255, 255, 255, 0.65);
-  overflow: visible;
+  overflow: hidden;
   will-change: transform;
   transform-style: preserve-3d;
 }
@@ -381,19 +380,27 @@ body {
 .hero-stage-img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  border-radius: 14px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 16px;
   display: block;
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* Hotspots Overlay */
 .hotspots-layer {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 0;
   overflow: visible;
+  pointer-events: none;
+}
+
+.hotspots-layer > * {
+  pointer-events: auto;
 }
 
 .desk-hotspot {
