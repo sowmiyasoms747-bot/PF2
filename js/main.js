@@ -10,16 +10,16 @@
   // 1. Hotspot Definitions for Hero Illustration (Normalized Coordinates & Z-Index)
   // =========================================================================
   const HOTSPOTS = [
-    // Background layer: Sowmiya herself (z-index: 10)
+    // Background layer: Sowmiya herself (z-index: 12)
     {
       id: 'sowmiya_avatar',
       name: 'Sowmiya • Product Designer & UX Researcher',
       tag: 'Designer',
       icon: '👋',
-      x: 0.235, y: 0.070, w: 0.250, h: 0.500,
-      zIndex: 10,
-      pulseX: 0.36, pulseY: 0.28,
-      pop: 'Hi there! Welcome to my design space 👋',
+      x: 0.310, y: 0.250, w: 0.210, h: 0.490,
+      zIndex: 12,
+      pulseX: 0.440, pulseY: 0.410,
+      pop: 'Hi there! Welcome to my sunlit design studio 👋',
       action: 'scroll',
       target: '#about'
     },
@@ -29,9 +29,9 @@
       name: 'System Monitor • Wireframe Flow',
       tag: 'Wireframe',
       icon: '📐',
-      x: 0.590, y: 0.235, w: 0.170, h: 0.250,
+      x: 0.670, y: 0.330, w: 0.095, h: 0.250,
       zIndex: 22,
-      pulseX: 0.67, pulseY: 0.34,
+      pulseX: 0.715, pulseY: 0.440,
       pop: 'Wireframe user flows: 6 alternate navigation paths tested',
       action: 'scroll',
       target: '#wireframe-hifi'
@@ -41,12 +41,25 @@
       name: 'System Monitor • High-Fidelity UI Screens',
       tag: 'High Fidelity',
       icon: '📱',
-      x: 0.760, y: 0.235, w: 0.195, h: 0.250,
+      x: 0.765, y: 0.330, w: 0.125, h: 0.250,
       zIndex: 22,
-      pulseX: 0.86, pulseY: 0.34,
+      pulseX: 0.830, pulseY: 0.440,
       pop: 'Polished screens with WCAG AAA accessibility tokens',
       action: 'case',
       target: 'book_trainer'
+    },
+    // Wall Process Checklist Board (z-index: 20)
+    {
+      id: 'ux_process_board',
+      name: 'UX / UI Process Board • Research to Iteration',
+      tag: 'Methodology',
+      icon: '📋',
+      x: 0.545, y: 0.100, w: 0.105, h: 0.285,
+      zIndex: 20,
+      pulseX: 0.595, pulseY: 0.220,
+      pop: 'The 6-stage product loop: Research → Wireframes → UI → Prototype → Test → Iterate ♡',
+      action: 'scroll',
+      target: '#approach'
     },
     // Foreground layer: Laptop (z-index: 25)
     {
@@ -54,93 +67,112 @@
       name: 'Laptop • Park Share Live Prototype',
       tag: 'Live Prototype',
       icon: '💻',
-      x: 0.440, y: 0.505, w: 0.430, h: 0.335,
+      x: 0.530, y: 0.500, w: 0.240, h: 0.300,
       zIndex: 25,
-      pulseX: 0.65, pulseY: 0.66,
+      pulseX: 0.650, pulseY: 0.630,
       pop: 'Figma interactive prototype: real-time spot reservations',
       action: 'case',
       target: 'park_share'
     },
-    // Desk surface layer: Pages, Sketchbook, Books, Mug (z-index: 28)
+    // Desk surface layer: Digital Tablet on left (z-index: 28)
     {
-      id: 'table_pages',
-      name: 'Pages on Table • High Fidelity UI & Component Specs',
-      tag: 'High Fidelity',
-      icon: '📑',
-      x: 0.575, y: 0.835, w: 0.395, h: 0.155,
+      id: 'tablet_wireframe',
+      name: 'Digital Tablet • Interactive Wireframes',
+      tag: 'Tablet Prototype',
+      icon: '📱',
+      x: 0.035, y: 0.860, w: 0.315, h: 0.135,
       zIndex: 28,
-      pulseX: 0.76, pulseY: 0.90,
-      pop: 'High-fidelity component specs & 8-pt grid system',
+      pulseX: 0.180, pulseY: 0.925,
+      pop: 'Testing touch gestures, tap targets & responsive layouts on tablet',
       action: 'scroll',
       target: '#wireframe-hifi'
     },
+    // Desk surface layer: Open Sketchbook (z-index: 28)
     {
       id: 'sketchbook',
       name: 'Sketchbook • Wireframe Ideation & Flows',
       tag: 'Wireframe',
       icon: '✏️',
-      x: 0.215, y: 0.780, w: 0.355, h: 0.170,
+      x: 0.295, y: 0.745, w: 0.255, h: 0.150,
       zIndex: 28,
-      pulseX: 0.38, pulseY: 0.86,
-      pop: 'Rapid pencil wireframes to explore information hierarchy',
+      pulseX: 0.420, pulseY: 0.810,
+      pop: 'Rapid pencil wireframes exploring information hierarchy',
       action: 'scroll',
       target: '#approach'
     },
+    // Coffee Mug (z-index: 28)
     {
       id: 'coffee_mug',
       name: 'Coffee Mug • Fuel for 42 User Interviews',
       tag: 'User Empathy',
       icon: '☕',
-      x: 0.052, y: 0.675, w: 0.155, h: 0.190,
+      x: 0.185, y: 0.670, w: 0.090, h: 0.175,
       zIndex: 28,
-      pulseX: 0.12, pulseY: 0.76,
-      pop: 'Coffee & Empathy: 42 user research calls completed!',
+      pulseX: 0.230, pulseY: 0.745,
+      pop: 'Good Design, Better Experiences: 42 user research calls completed! ☕',
       action: 'toast'
     },
+    // Color Swatches (z-index: 28)
     {
       id: 'color_swatches',
       name: 'Color Swatches • Contrast & HSL Design Tokens',
       tag: 'Design Tokens',
       icon: '🎨',
-      x: 0.050, y: 0.865, w: 0.160, h: 0.125,
+      x: 0.405, y: 0.870, w: 0.150, h: 0.125,
       zIndex: 28,
-      pulseX: 0.13, pulseY: 0.92,
-      pop: 'Harmonious HSL tokens tested across lighting conditions',
+      pulseX: 0.475, pulseY: 0.930,
+      pop: 'Harmonious HSL tokens tested across diverse lighting conditions',
       action: 'scroll',
       target: '#toolkit'
     },
+    // UX Books Stack on Left (z-index: 26)
     {
-      id: 'ux_books',
-      name: 'UX Books • Research Heuristics & Design Systems',
+      id: 'ux_books_left',
+      name: 'Design Library • Interaction & Design Systems',
       tag: 'UX Library',
       icon: '📚',
-      x: 0.850, y: 0.645, w: 0.145, h: 0.180,
-      zIndex: 28,
-      pulseX: 0.92, pulseY: 0.73,
-      pop: 'Nielsen Norman heuristics & Don Norman’s principles',
+      x: 0.000, y: 0.520, w: 0.180, h: 0.430,
+      zIndex: 26,
+      pulseX: 0.085, pulseY: 0.760,
+      pop: 'Nielsen Norman heuristics & Don Norman’s design principles',
       action: 'scroll',
       target: '#approach'
     },
+    // Design Books & Thermos on Right (z-index: 26)
     {
-      id: 'sticky_note_left',
-      name: 'Sticky Note • Ideas → Wireframes → UI → Impact',
-      tag: 'Process',
-      icon: '💡',
-      x: 0.008, y: 0.400, w: 0.095, h: 0.165,
+      id: 'desk_books_right',
+      name: 'Research Hub • Design Systems & User Testing',
+      tag: 'Design Systems',
+      icon: '📘',
+      x: 0.770, y: 0.600, w: 0.200, h: 0.190,
+      zIndex: 26,
+      pulseX: 0.865, pulseY: 0.680,
+      pop: 'Design systems documentation & user test synthesis logs',
+      action: 'scroll',
+      target: '#approach'
+    },
+    // Sticky Note on Desk (z-index: 28)
+    {
+      id: 'sticky_note_people',
+      name: 'Sticky Note • Better Experiences for Real People',
+      tag: 'Empathy',
+      icon: '💛',
+      x: 0.320, y: 0.910, w: 0.080, h: 0.085,
       zIndex: 28,
-      pulseX: 0.05, pulseY: 0.48,
-      pop: 'Ideas → Wireframes → UI → Impact ♡',
+      pulseX: 0.355, pulseY: 0.945,
+      pop: 'Better Experiences for Real People ♡',
       action: 'toast'
     },
+    // Sticky Note on Wall (z-index: 20)
     {
       id: 'sticky_note_wall',
-      name: 'Affinity Wall • Better User Experiences ♡',
+      name: 'Sticky Note • Small Steps, Big Designs',
       tag: 'Mantra',
       icon: '✨',
-      x: 0.510, y: 0.015, w: 0.100, h: 0.145,
-      zIndex: 28,
-      pulseX: 0.56, pulseY: 0.08,
-      pop: 'Good design is empathetic and invisible ✨',
+      x: 0.375, y: 0.135, w: 0.055, h: 0.125,
+      zIndex: 20,
+      pulseX: 0.400, pulseY: 0.195,
+      pop: 'Small Steps, Big Designs ♡',
       action: 'toast'
     }
   ];
@@ -255,17 +287,17 @@
     const W = stageCard.clientWidth;
     const H = stageCard.clientHeight;
     if (!W || !H) return;
-    const AR = 1536 / 1024;
+    const AR = 1672 / 940;
     let imgW, imgH, imgLeft, imgTop;
     if (W / H > AR) {
       imgW = W;
       imgH = W / AR;
       imgLeft = 0;
-      imgTop = (H - imgH) * 0.38; // matching CSS object-position: center 38%
+      imgTop = (H - imgH) * 0.48; // matching CSS object-position: center 48%
     } else {
       imgH = H;
       imgW = H * AR;
-      imgTop = 0;
+      imgTop = (H - imgH) * 0.48;
       imgLeft = (W - imgW) * 0.5;
     }
     hotspotsLayer.style.position = 'absolute';
