@@ -300,7 +300,7 @@
             </div>
             <div class="project-actions">
               <button class="btn-primary" data-open-case="bookmyshow">Read Case Study →</button>
-              <button class="btn-secondary" data-open-compare="bms_slots">View Before / After ⇄</button>
+              <button class="btn-secondary" data-open-compare="bms_ai_booking">View Before / After ⇄</button>
             </div>
           </div>
         </article>
@@ -412,24 +412,39 @@
       <div class="wireframe-showcase-container">
         <!-- Comparison Tabs Selector -->
         <div class="comparison-tabs-bar">
-          <button class="comp-tab-btn active" data-comp="bms_slots">
-            <span>🎬</span> BookMyShow: Time Slot Selection
+          <button class="comp-tab-btn active" data-comp="bms_ai_booking">
+            <span>🎬</span> BMS: AI Option
           </button>
-          <button class="comp-tab-btn" data-comp="sensory_route">
-            <span>🗺️</span> Sensory Mapping: Calm Route Navigation
+          <button class="comp-tab-btn" data-comp="bms_date">
+            <span>📅</span> BMS: Date Selection
           </button>
-          <button class="comp-tab-btn" data-comp="gpay_spend">
-            <span>💳</span> Google Pay: Today's Spend Indicator
+          <button class="comp-tab-btn" data-comp="bms_slots">
+            <span>⏱️</span> BMS: Time Slots
+          </button>
+          <button class="comp-tab-btn" data-comp="bms_preview">
+            <span>📋</span> BMS: Preview
           </button>
           <button class="comp-tab-btn" data-comp="bms_payment">
-            <span>🎟️</span> BookMyShow: Autopay Pre-authorization
+            <span>💳</span> BMS: 1-Tap Autopay
+          </button>
+          <button class="comp-tab-btn" data-comp="bms_status">
+            <span>🎟️</span> BMS: Ticket Status
+          </button>
+          <button class="comp-tab-btn" data-comp="parkshare_fit">
+            <span>🚗</span> Park Share
+          </button>
+          <button class="comp-tab-btn" data-comp="sensory_route">
+            <span>🗺️</span> Sensory Mapping
+          </button>
+          <button class="comp-tab-btn" data-comp="gpay_spend">
+            <span>💵</span> Google Pay
           </button>
         </div>
 
         <!-- Controls Header -->
         <div class="split-viewer-header">
           <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 14px; font-weight: 700; color: var(--ink-900);" id="compViewerTitle">BookMyShow • Legacy 1 Slot vs AI 2 Slots</span>
+            <span style="font-size: 14px; font-weight: 700; color: var(--ink-900);" id="compViewerTitle">BookMyShow • Standard Manual Flow vs AI Smart Booking Option</span>
             <span style="font-size: 12px; color: var(--ink-500);">(Drag slider handle)</span>
           </div>
           <div class="split-controls-pills">
@@ -443,14 +458,14 @@
         <div class="comparison-slider-box" id="comparisonSlider">
           <!-- Before Layer (Base) -->
           <div class="slider-layer wireframe-layer">
-            <img id="compBeforeImg" src="assets/images/casestudy/Bookmyshow/Theater and timing/Before 1 time slot.png" alt="Before Feature Baseline Screen">
-            <span class="layer-badge-floating right-badge" id="compBeforeBadge">⚠️ Before: Single Time Slot Constraint</span>
+            <img id="compBeforeImg" src="assets/images/casestudy/Bookmyshow/camparison/AI Booking/Before AI option.png" alt="Before Feature Baseline Screen">
+            <span class="layer-badge-floating right-badge" id="compBeforeBadge">⚠️ Before: Standard Manual Booking Entry</span>
           </div>
 
           <!-- High-Fidelity / New Feature Layer (Top with Clip Path) -->
           <div class="slider-layer hifi-layer">
-            <img id="compAfterImg" src="assets/images/casestudy/Bookmyshow/Theater and timing/After AI 2 time slot.png" alt="After Feature Enhanced Screen">
-            <span class="layer-badge-floating left-badge" id="compAfterBadge">⚡ After: AI Multi-Slot Smart Fallback</span>
+            <img id="compAfterImg" src="assets/images/casestudy/Bookmyshow/camparison/AI Booking/After AI option.png" alt="After Feature Enhanced Screen">
+            <span class="layer-badge-floating left-badge" id="compAfterBadge">⚡ After: AI Pre-Booking &amp; Smart Preference Toggle</span>
           </div>
 
           <!-- Divider Line and Knob -->
@@ -461,16 +476,16 @@
         <!-- Slider Insights Grid -->
         <div class="slider-insights-grid">
           <div class="insight-card">
-            <h4><span id="insightIcon1">⚡</span> <span id="insightTitle1">Cognitive Friction Elimination</span></h4>
-            <p id="insightDesc1">By allowing users to set a secondary fallback time slot upfront, drop-off drops from 48% to 12% when high-demand seats sell out.</p>
+            <h4><span id="insightIcon1">⚡</span> <span id="insightTitle1">Eliminates Opening Rush</span></h4>
+            <p id="insightDesc1">Fans queue preferences in advance instead of stressing over exact midnight drop timings.</p>
           </div>
           <div class="insight-card">
-            <h4><span id="insightIcon2">💡</span> <span id="insightTitle2">Real-Time User Feedback</span></h4>
-            <p id="insightDesc2">Ambient visual cues and clear status chips inform users about seat availability before proceeding to checkout.</p>
+            <h4><span id="insightIcon2">💡</span> <span id="insightTitle2">Clear Cognitive Mental Model</span></h4>
+            <p id="insightDesc2">Dedicated "AI Option" chip establishes expectations clearly without disrupting standard flow.</p>
           </div>
           <div class="insight-card">
-            <h4><span id="insightIcon3">🎯</span> <span id="insightTitle3">Conversion &amp; Task Success</span></h4>
-            <p id="insightDesc3">Users complete ticket booking in 3.2 seconds on average, with 91% adopting automated fallback preferences.</p>
+            <h4><span id="insightIcon3">🎯</span> <span id="insightTitle3">94% User Delight</span></h4>
+            <p id="insightDesc3">Usability testing confirmed elimination of ticket drop anxiety and panic buying behaviors.</p>
           </div>
         </div>
       </div>

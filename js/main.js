@@ -1235,10 +1235,134 @@
   }
 
   // =========================================================================
-  // 9. Interactive Before / After Comparison Data & Overlay Modal Controller
+  // 9. WIREFRAME VS HI-FI COMPARISON DATA & MODAL LOGIC
   // =========================================================================
   const COMPARISONS = {
+    // --- BookMyShow: Complete 6-Stage AI Booking Redesign ---
+    bms_ai_booking: {
+      projectKey: 'bms',
+      caseId: 'bookmyshow',
+      stepNum: '1 / 6',
+      tabLabel: '1. AI Smart Option',
+      tag: '🎬 BOOKMYSHOW • STAGE 1',
+      title: 'BookMyShow • Standard Manual Flow vs AI Smart Booking Option',
+      tagline: 'Introducing an "AI Smart Booking" entry point on the movie overview page, allowing users to queue automated bookings and preferred seating criteria before tickets go live.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/camparison/AI Booking/Before AI option.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/camparison/AI Booking/After AI option.png',
+      beforeBadge: 'Standard Manual Booking Entry',
+      afterBadge: 'AI Pre-Booking & Smart Preference Toggle',
+      beforeDesc: 'Users had to manually wait for ticket release, refresh repeatedly, and fight against rush-hour server crashes during blockbuster ticket drops.',
+      afterDesc: 'Introduced an "AI Smart Option" mode allowing fans to set their preferences ahead of time, letting the background system execute automatically upon release.',
+      insights: [
+        { icon: '⚡', title: 'Eliminates Opening Rush', desc: 'Fans queue preferences in advance instead of stressing over exact midnight drop timings.' },
+        { icon: '💡', title: 'Clear Cognitive Mental Model', desc: 'Dedicated "AI Option" chip establishes expectations clearly without disrupting standard flow.' },
+        { icon: '🎯', title: '94% User Delight', desc: 'Usability testing confirmed elimination of ticket drop anxiety and panic buying behaviors.' }
+      ]
+    },
+    bms_date: {
+      projectKey: 'bms',
+      caseId: 'bookmyshow',
+      stepNum: '2 / 6',
+      tabLabel: '2. Date Selection',
+      tag: '🎬 BOOKMYSHOW • STAGE 2',
+      title: 'BookMyShow • Rigid Single Date vs AI Multi-Date Range Tolerance',
+      tagline: 'Allowing users to define acceptable date windows with priority ranking, preventing booking failure when opening day sells out in seconds.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/camparison/date/Before date selection.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/camparison/date/After AI implemention date selection.png',
+      beforeBadge: 'Rigid Single-Date Constraint',
+      afterBadge: 'AI Flexible Multi-Date Range & Alerts',
+      beforeDesc: 'Users could only pick one calendar date; if seats were sold out, they had to start their entire search over from scratch.',
+      afterDesc: 'AI calendar lets users set primary and secondary acceptable dates (e.g. Fri + Sat), automatically falling back if preferred night is full.',
+      insights: [
+        { icon: '📅', title: 'Flexible Date Tolerance', desc: 'Allows users to configure multi-day tolerance upfront for high-demand premiere releases.' },
+        { icon: '⚡', title: '78% Fewer Abandoned Searches', desc: 'Eliminates back-and-forth calendar toggling when Friday night sells out.' },
+        { icon: '🎯', title: 'Intelligent Schedule Matching', desc: 'Maintains theater and seat quality preferences across adjacent calendar days.' }
+      ]
+    },
+    bms_slots: {
+      projectKey: 'bms',
+      caseId: 'bookmyshow',
+      stepNum: '3 / 6',
+      tabLabel: '3. Showtime Slots',
+      tag: '🎬 BOOKMYSHOW • STAGE 3',
+      title: 'BookMyShow • Single Slot Constraint vs AI 2-Slot Smart Fallback',
+      tagline: 'Reinventing blockbuster movie ticket booking by introducing secondary preferences upfront, eliminating checkout drop-offs when high-demand seats sell out.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/camparison/Theater and timing/Before 1 time slot.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/camparison/Theater and timing/After AI 2 time slot.png',
+      beforeBadge: 'Single Time Slot Constraint',
+      afterBadge: 'AI 2-Slot Smart Fallback Hierarchy',
+      beforeDesc: 'Selecting only one showtime forced users back into queues if preferred seats were taken, losing their booking window entirely.',
+      afterDesc: 'Pre-sets primary and secondary time slot preferences upfront; if seat capacity fills, system automatically falls back without drop-off.',
+      insights: [
+        { icon: '⚡', title: 'Cognitive Friction Elimination', desc: 'Fallback showtime drops checkout abandonment from 48% to 12% during peak drops.' },
+        { icon: '💡', title: 'Real-Time Seat Feedback', desc: 'Visual status chips inform users about seat availability before proceeding to checkout.' },
+        { icon: '🎯', title: '3.2s Average Booking Speed', desc: 'Users lock in tickets with zero hesitation through automated fallback execution.' }
+      ]
+    },
+    bms_preview: {
+      projectKey: 'bms',
+      caseId: 'bookmyshow',
+      stepNum: '4 / 6',
+      tabLabel: '4. Booking Preview',
+      tag: '🎬 BOOKMYSHOW • STAGE 4',
+      title: 'BookMyShow • Static Order Summary vs AI Preference Hierarchy Preview',
+      tagline: 'Providing total transparency into priority showtimes, seating preferences, and cancellation guarantees before pre-authorizing payment.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/camparison/Preview/Before Preview.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/camparison/Preview/After AI preview.png',
+      beforeBadge: 'Static Ticket Price Summary',
+      afterBadge: 'AI Smart Preference Hierarchy Preview',
+      beforeDesc: 'Legacy preview screen showed only basic ticket pricing without verifying fallback rules or cancellation protections before checkout.',
+      afterDesc: 'Clear visual confirmation of Priority 1 and Priority 2 choices, theater locations, seating tier, and automated refund escrow guarantee.',
+      insights: [
+        { icon: '📋', title: 'Preference Transparency', desc: 'Explicit hierarchy breakdown ensures users know exactly what the system will book on their behalf.' },
+        { icon: '🛡️', title: 'Zero Anxiety Guarantee', desc: 'Prominently features escrow and 100% refund terms if neither preferred slot is secured.' },
+        { icon: '💡', title: '96% User Comprehension', desc: 'Users understood fallback triggers without requiring tutorial hints or FAQ lookups.' }
+      ]
+    },
+    bms_payment: {
+      projectKey: 'bms',
+      caseId: 'bookmyshow',
+      stepNum: '5 / 6',
+      tabLabel: '5. 1-Tap Autopay',
+      tag: '🎬 BOOKMYSHOW • STAGE 5',
+      title: 'BookMyShow • Manual Payment Gateway vs 1-Tap UPI Pre-Authorization',
+      tagline: 'Re-engineering rush-hour booking by escrowing pre-authorized UPI mandates, locking in seats instantly without waiting in gateway queues.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/camparison/payment/Before payment.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/camparison/payment/After New feature auto payment.png',
+      beforeBadge: 'Manual Gateway Redirect Queue',
+      afterBadge: '1-Tap Pre-Authorized UPI Autopay',
+      beforeDesc: '3-minute payment gateway redirect loops frequently timed out during high-traffic blockbuster ticket releases, dropping selected seats.',
+      afterDesc: 'Pre-authorizes payment via UPI mandate with 0-second checkout once seats are verified, eliminating gateway timeout losses.',
+      insights: [
+        { icon: '🚀', title: '1-Tap Fast Checkout', desc: 'Pre-authorizes UPI / Debit mandate before booking opens so high-demand tickets lock in instantaneously.' },
+        { icon: '🔒', title: 'Zero Deduction Guarantee', desc: 'Funds are securely escrowed and only debited when ticket generation is verified by the theater server.' },
+        { icon: '📈', title: '91% Autopay Adoption', desc: 'Eliminates 90-second gateway wait times and payment session timeouts during blockbuster ticket launches.' }
+      ]
+    },
+    bms_status: {
+      projectKey: 'bms',
+      caseId: 'bookmyshow',
+      stepNum: '6 / 6',
+      tabLabel: '6. Ticket Status',
+      tag: '🎬 BOOKMYSHOW • STAGE 6',
+      title: 'BookMyShow • Standard Receipt vs AI Pre-Booked Dynamic Status Card',
+      tagline: 'Delivering real-time ticket confirmation progress, digital wallet pass generation, and automated allocation updates.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/camparison/Ticket Status checking/before booked.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/camparison/Ticket Status checking/after pre booked.png',
+      beforeBadge: 'Standard Booking History Receipt',
+      afterBadge: 'AI Pre-Booked Dynamic Status Card',
+      beforeDesc: 'Users had to check active bookings manually with no proactive updates on whether waitlisted tickets were allocated or cancelled.',
+      afterDesc: 'Live status tracker showing queue position, auto-booking confirmation pulse, digital pass, and instant QR generation.',
+      insights: [
+        { icon: '🎟️', title: 'Real-Time Status Pulse', desc: 'Displays allocation progress with ambient animated status chip and queue indicator.' },
+        { icon: '📲', title: 'Instant QR Ticket Generation', desc: 'Generates scannable QR pass immediately upon auto-confirmation.' },
+        { icon: '🛡️', title: 'Auto-Refund Confirmation', desc: 'Displays instant refund voucher receipt if neither fallback slot was obtainable.' }
+      ]
+    },
+
+    // --- Other Portfolio Comparisons ---
     parkshare_fit: {
+      projectKey: 'parkshare',
       caseId: 'park_share',
       tabLabel: '🚗 Park Share: Vehicle Dimension Fit-Check',
       tag: '🚗 NEXZWARE INTERNSHIP',
@@ -1256,43 +1380,8 @@
         { icon: '🛡️', title: '94% Task Success Rate', desc: 'Eliminated circling anxiety and booking cancellations across 24 field user interviews.' }
       ]
     },
-    bms_slots: {
-      caseId: 'bookmyshow',
-      tabLabel: '🎬 BookMyShow: Time Slot Selection',
-      tag: '🎬 ACADEMIC CASE STUDY',
-      title: 'BookMyShow • Single Slot Constraint vs AI Smart Multi-Slot Fallback',
-      tagline: 'Reinventing blockbuster movie ticket booking by introducing secondary preferences upfront, eliminating checkout drop-offs when high-demand seats sell out.',
-      beforeImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/Before 1 time slot.png',
-      afterImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/After AI 2 time slot.png',
-      beforeBadge: 'Single Time Slot Constraint',
-      afterBadge: 'AI Multi-Slot Smart Fallback',
-      beforeDesc: 'Selecting only one showtime forced users back into long queues if preferred seats were taken, losing their booking window entirely.',
-      afterDesc: 'Pre-sets primary and secondary time slot preferences upfront; if seat capacity fills, system automatically falls back without drop-off.',
-      insights: [
-        { icon: '⚡', title: 'Cognitive Friction Elimination', desc: 'By allowing users to set a secondary fallback time slot upfront, drop-off drops from 48% to 12% when high-demand seats sell out.' },
-        { icon: '💡', title: 'Real-Time User Feedback', desc: 'Ambient visual cues and clear status chips inform users about seat availability before proceeding to checkout.' },
-        { icon: '🎯', title: 'Conversion & Task Success', desc: 'Users complete ticket booking in 3.2 seconds on average, with 91% adopting automated fallback preferences.' }
-      ]
-    },
-    bms_payment: {
-      caseId: 'bookmyshow',
-      tabLabel: '🎟️ BookMyShow: Pre-Authorized Autopay',
-      tag: '🎟️ ACADEMIC CASE STUDY',
-      title: 'BookMyShow • Manual Payment Gateway vs 1-Tap UPI Pre-Authorization',
-      tagline: 'Re-engineering rush-hour booking by escrowing pre-authorized UPI mandates, locking in seats instantly without waiting in gateway queues.',
-      beforeImg: 'assets/images/casestudy/Bookmyshow/payment/Before payment.png',
-      afterImg: 'assets/images/casestudy/Bookmyshow/payment/After New feature auto payment.png',
-      beforeBadge: 'Manual Gateway Redirect Checkout',
-      afterBadge: '1-Tap UPI Pre-Authorized Autopay',
-      beforeDesc: '3-minute payment gateway redirect loops frequently timed out during high-traffic blockbuster ticket releases, dropping selected seats.',
-      afterDesc: 'Pre-authorizes payment via UPI mandate with 0-second checkout once seats are verified, eliminating gateway timeout losses.',
-      insights: [
-        { icon: '🚀', title: '1-Tap Fast Checkout', desc: 'Pre-authorizes UPI / Debit mandate before booking opens so high-demand tickets are locked in instantaneously.' },
-        { icon: '🔒', title: 'Zero Deduction Guarantee', desc: 'Funds are securely escrowed and only debited when ticket generation is verified by the theater server.' },
-        { icon: '📈', title: '91% Autopay Adoption', desc: 'Eliminates 90-second gateway wait times and payment session timeouts during blockbuster ticket launches.' }
-      ]
-    },
     sensory_route: {
+      projectKey: 'sensory',
       caseId: 'sensory_mapping',
       tabLabel: '🗺️ Sensory Mapping: Calm Route Navigation',
       tag: '🗺️ ACADEMIC CASE STUDY',
@@ -1311,6 +1400,7 @@
       ]
     },
     gpay_spend: {
+      projectKey: 'gpay',
       caseId: 'gpay',
       tabLabel: '💳 Google Pay: Today\'s Spend Awareness',
       tag: '💳 ACADEMIC CASE STUDY',
@@ -1387,11 +1477,27 @@
   const beforeAfterModalBody = document.getElementById('beforeAfterModalBody');
   const beforeAfterCloseBtn = document.getElementById('beforeAfterModalCloseBtn');
 
-  let activeCompareKey = 'bms_slots';
+  const PROJECTS_LIST = [
+    { key: 'bms', label: '🎬 BookMyShow (6 Flows)', defaultComp: 'bms_ai_booking' },
+    { key: 'parkshare', label: '🚗 Park Share', defaultComp: 'parkshare_fit' },
+    { key: 'sensory', label: '🗺️ Sensory Mapping', defaultComp: 'sensory_route' },
+    { key: 'gpay', label: '💳 Google Pay', defaultComp: 'gpay_spend' }
+  ];
+
+  const BMS_STEPS = [
+    { key: 'bms_ai_booking', label: '1. AI Option' },
+    { key: 'bms_date', label: '2. Date Select' },
+    { key: 'bms_slots', label: '3. Time Slots' },
+    { key: 'bms_preview', label: '4. Preview' },
+    { key: 'bms_payment', label: '5. 1-Tap Autopay' },
+    { key: 'bms_status', label: '6. Ticket Status' }
+  ];
+
+  let activeCompareKey = 'bms_ai_booking';
 
   function openBeforeAfterModal(compKey) {
     if (!beforeAfterModalOverlay || !beforeAfterModalBody) return;
-    activeCompareKey = COMPARISONS[compKey] ? compKey : 'bms_slots';
+    activeCompareKey = COMPARISONS[compKey] ? compKey : 'bms_ai_booking';
     renderBeforeAfterModalContent(activeCompareKey);
     beforeAfterModalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -1405,14 +1511,30 @@
   }
 
   function renderBeforeAfterModalContent(compKey) {
-    const data = COMPARISONS[compKey] || COMPARISONS['bms_slots'];
+    const data = COMPARISONS[compKey] || COMPARISONS['bms_ai_booking'];
     activeCompareKey = compKey;
+    const currentProjectKey = data.projectKey || 'bms';
 
-    const tabsHtml = Object.keys(COMPARISONS).map(k => {
-      const item = COMPARISONS[k];
-      const isActive = k === compKey ? 'active' : '';
-      return `<button class="modal-comp-tab-btn ${isActive}" data-switch-comp="${k}">${item.tabLabel || item.title}</button>`;
+    // 1. Top Project level tabs
+    const projectTabsHtml = PROJECTS_LIST.map(p => {
+      const isActive = p.key === currentProjectKey ? 'active' : '';
+      return `<button class="modal-project-pill-btn ${isActive}" data-switch-project="${p.key}" data-target-comp="${p.defaultComp}">${p.label}</button>`;
     }).join('');
+
+    // 2. If BookMyShow is active, render the 6 sub-steps journey flow
+    let subFlowHtml = '';
+    if (currentProjectKey === 'bms') {
+      const stepsHtml = BMS_STEPS.map(s => {
+        const isActive = s.key === compKey ? 'active' : '';
+        return `<button class="modal-flow-step-btn ${isActive}" data-switch-comp="${s.key}">${s.label}</button>`;
+      }).join('');
+      subFlowHtml = `
+        <div class="modal-flow-steps-bar">
+          <span class="modal-flow-label">✦ 6-Stage AI Booking Journey:</span>
+          ${stepsHtml}
+        </div>
+      `;
+    }
 
     const insightsHtml = (data.insights || []).map(ins => `
       <div class="modal-insight-card">
@@ -1428,9 +1550,13 @@
         <p class="modal-comp-desc">${data.tagline}</p>
       </div>
 
-      <div class="modal-comp-tabs-bar">
-        ${tabsHtml}
+      <!-- Top Project Level Tabs -->
+      <div class="modal-project-nav-bar">
+        ${projectTabsHtml}
       </div>
+
+      <!-- Sub-Flow Journey Steps Bar -->
+      ${subFlowHtml}
 
       <!-- Side-by-Side Parallel Screens Showcase -->
       <div class="modal-parallel-showcase">
@@ -1485,7 +1611,15 @@
       </div>
     `;
 
-    // Wire up tab buttons inside modal
+    // Wire up project switcher tabs
+    beforeAfterModalBody.querySelectorAll('[data-switch-project]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetComp = tab.dataset.targetComp;
+        renderBeforeAfterModalContent(targetComp);
+      });
+    });
+
+    // Wire up sub-flow step buttons
     beforeAfterModalBody.querySelectorAll('[data-switch-comp]').forEach(tab => {
       tab.addEventListener('click', () => {
         const nextKey = tab.dataset.switchComp;
