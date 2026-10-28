@@ -1874,11 +1874,7 @@ body {
 }
 
 /* Soft Figma Dimension Pill on Project Cards Hover */
-.project-card {
-  position: relative;
-}
-
-.figma-dimension-tag {
+.project-card .figma-dimension-tag {
   position: absolute;
   bottom: 12px;
   right: 14px;
