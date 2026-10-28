@@ -1242,12 +1242,14 @@
       caseId: 'park_share',
       tabLabel: '🚗 Park Share: Vehicle Dimension Fit-Check',
       tag: '🚗 NEXZWARE INTERNSHIP',
-      title: 'Park Share • Space Guesswork vs Vehicle Dimension Fit-Check',
+      title: 'Park Share • Space Guesswork vs Dynamic Fit-Check',
       tagline: 'Eliminating parking anxiety by dynamically matching vehicle dimensions (length, width, height) with host parking bay measurements before reservation.',
       beforeImg: 'assets/images/Parkshare/User fit check not fit.png',
       afterImg: 'assets/images/Parkshare/User fit check fits. .png',
-      beforeBadge: '❌ Before: Vehicle Dimension Exceeds Space',
-      afterBadge: '✅ After: Dynamic Fit Verification (Fits Confirmed)',
+      beforeBadge: 'Space Guesswork & Rejection Warning',
+      afterBadge: 'Dynamic Dimension Verification (Fits Confirmed)',
+      beforeDesc: 'Drivers booked bays blindly without knowing if their vehicle fit, leading to parking cancellations, owner disputes, and circling anxiety.',
+      afterDesc: 'Instant 3-axis dimension matching (length, width, height) with immediate green verification tag, preventing arrival mismatch.',
       insights: [
         { icon: '📐', title: 'Dynamic Dimension Calculator', desc: 'Pre-checks car dimensions against parking space bounds in milliseconds, preventing arrival mismatch.' },
         { icon: '⏱️', title: '+34% Faster Booking Speed', desc: 'Commuters reserve pre-verified bays in seconds without back-and-forth owner messages.' },
@@ -1262,12 +1264,32 @@
       tagline: 'Reinventing blockbuster movie ticket booking by introducing secondary preferences upfront, eliminating checkout drop-offs when high-demand seats sell out.',
       beforeImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/Before 1 time slot.png',
       afterImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/After AI 2 time slot.png',
-      beforeBadge: '⚠️ Before: Single Time Slot Constraint',
-      afterBadge: '⚡ After: AI Multi-Slot Smart Fallback',
+      beforeBadge: 'Single Time Slot Constraint',
+      afterBadge: 'AI Multi-Slot Smart Fallback',
+      beforeDesc: 'Selecting only one showtime forced users back into long queues if preferred seats were taken, losing their booking window entirely.',
+      afterDesc: 'Pre-sets primary and secondary time slot preferences upfront; if seat capacity fills, system automatically falls back without drop-off.',
       insights: [
         { icon: '⚡', title: 'Cognitive Friction Elimination', desc: 'By allowing users to set a secondary fallback time slot upfront, drop-off drops from 48% to 12% when high-demand seats sell out.' },
         { icon: '💡', title: 'Real-Time User Feedback', desc: 'Ambient visual cues and clear status chips inform users about seat availability before proceeding to checkout.' },
         { icon: '🎯', title: 'Conversion & Task Success', desc: 'Users complete ticket booking in 3.2 seconds on average, with 91% adopting automated fallback preferences.' }
+      ]
+    },
+    bms_payment: {
+      caseId: 'bookmyshow',
+      tabLabel: '🎟️ BookMyShow: Pre-Authorized Autopay',
+      tag: '🎟️ ACADEMIC CASE STUDY',
+      title: 'BookMyShow • Manual Payment Gateway vs 1-Tap UPI Pre-Authorization',
+      tagline: 'Re-engineering rush-hour booking by escrowing pre-authorized UPI mandates, locking in seats instantly without waiting in gateway queues.',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/payment/Before payment.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/payment/After New feature auto payment.png',
+      beforeBadge: 'Manual Gateway Redirect Checkout',
+      afterBadge: '1-Tap UPI Pre-Authorized Autopay',
+      beforeDesc: '3-minute payment gateway redirect loops frequently timed out during high-traffic blockbuster ticket releases, dropping selected seats.',
+      afterDesc: 'Pre-authorizes payment via UPI mandate with 0-second checkout once seats are verified, eliminating gateway timeout losses.',
+      insights: [
+        { icon: '🚀', title: '1-Tap Fast Checkout', desc: 'Pre-authorizes UPI / Debit mandate before booking opens so high-demand tickets are locked in instantaneously.' },
+        { icon: '🔒', title: 'Zero Deduction Guarantee', desc: 'Funds are securely escrowed and only debited when ticket generation is verified by the theater server.' },
+        { icon: '📈', title: '91% Autopay Adoption', desc: 'Eliminates 90-second gateway wait times and payment session timeouts during blockbuster ticket launches.' }
       ]
     },
     sensory_route: {
@@ -1278,8 +1300,10 @@
       tagline: 'A thoughtful environmental route navigation feature for neurodiverse and sensory-sensitive travelers, offering noise/crowd heatmaps and calm alternative routes.',
       beforeImg: 'assets/images/casestudy/sensory mapping/comparison screens/Og screen.jpeg',
       afterImg: 'assets/images/casestudy/sensory mapping/comparison screens/New added feature screen.png',
-      beforeBadge: '🚗 Before: Standard Google Maps Route',
-      afterBadge: '🌿 After: Sound & Crowd Heatmap Overlay',
+      beforeBadge: 'Standard Google Maps Route',
+      afterBadge: 'Sound & Crowd Heatmap Overlay',
+      beforeDesc: 'Generic navigation algorithms only optimize for driving speed, leading sensitive pedestrians through loud, chaotic, and crowded streets.',
+      afterDesc: 'Real-time noise decibel ratings and crowd congestion overlays guide neurodiverse pedestrians along peaceful, shaded pathways.',
       insights: [
         { icon: '🌿', title: 'Calm Sensory Navigation', desc: 'Highlights low-decibel, shaded pathways for neurodiverse and sensory-sensitive pedestrians.' },
         { icon: '🎨', title: 'Acoustic & Glare Heatmaps', desc: 'Intuitive color-graded overlays indicate construction noise hotspots and high crowd congestion in real-time.' },
@@ -1294,28 +1318,14 @@
       tagline: 'Embedding ambient daily spending awareness directly into payment confirmation screens to curb unconscious impulse spending without demanding manual budgeting.',
       beforeImg: 'assets/images/casestudy/G-pay/camparsion/old version.png',
       afterImg: 'assets/images/casestudy/G-pay/camparsion/New feature added version.png',
-      beforeBadge: '⚪ Before: Static Payment Amount Only',
-      afterBadge: '💡 After: Today\'s Spend Awareness Tag',
+      beforeBadge: 'Static Payment Amount Only',
+      afterBadge: 'Today\'s Spend Awareness Tag',
+      beforeDesc: 'Confirmation screen displayed only the transaction amount without contextual daily spending history, enabling unconscious impulse buys.',
+      afterDesc: 'Ambient non-punitive tag displays accumulated daily spend directly on payment entry, reducing impulse purchases by 63%.',
       insights: [
         { icon: '💡', title: 'Zero-Friction Behavioral Nudge', desc: 'Ambient daily spending total is visible at the instant of payment entry, preventing impulse buys without manual budgeting.' },
         { icon: '🌱', title: 'Non-Punitive Mindfulness', desc: 'Soft pastel badges gently turn warm amber when daily limits approach, keeping budgeting constructive rather than stressful.' },
         { icon: '📊', title: '63% Impulse Reduction', desc: 'Usability testing demonstrated a 63% decrease in unintended impulse micro-transactions across test cohorts.' }
-      ]
-    },
-    bms_payment: {
-      caseId: 'bookmyshow',
-      tabLabel: '🎟️ BookMyShow: Pre-Authorized Autopay',
-      tag: '🎟️ ACADEMIC CASE STUDY',
-      title: 'BookMyShow • Manual Payment Gateway vs 1-Tap UPI Pre-Authorization',
-      tagline: 'Re-engineering rush-hour booking by escrowing pre-authorized UPI mandates, locking in seats instantly without waiting in gateway queues.',
-      beforeImg: 'assets/images/casestudy/Bookmyshow/payment/Before payment.png',
-      afterImg: 'assets/images/casestudy/Bookmyshow/payment/After New feature auto payment.png',
-      beforeBadge: '⏳ Before: Manual Gateway Redirect Checkout',
-      afterBadge: '🚀 After: 1-Tap UPI/Debit Pre-Authorized Autopay',
-      insights: [
-        { icon: '🚀', title: '1-Tap Fast Checkout', desc: 'Pre-authorizes UPI / Debit mandate before booking opens so high-demand tickets are locked in instantaneously.' },
-        { icon: '🔒', title: 'Zero Deduction Guarantee', desc: 'Funds are securely escrowed and only debited when ticket generation is verified by the theater server.' },
-        { icon: '📈', title: '91% Autopay Adoption', desc: 'Eliminates 90-second gateway wait times and payment session timeouts during blockbuster ticket launches.' }
       ]
     }
   };
@@ -1371,7 +1381,7 @@
   }
 
   // =========================================================================
-  // 9b. Before / After Overlay Modal Controller
+  // 9b. Before / After Overlay Modal Controller (Side-by-Side Parallel Screens)
   // =========================================================================
   const beforeAfterModalOverlay = document.getElementById('beforeAfterModal');
   const beforeAfterModalBody = document.getElementById('beforeAfterModalBody');
@@ -1413,7 +1423,7 @@
 
     beforeAfterModalBody.innerHTML = `
       <div class="modal-comp-header">
-        <span class="section-tag">${data.tag || '✦ INTERACTIVE COMPARISON'}</span>
+        <span class="section-tag">${data.tag || '✦ PARALLEL COMPARISON'}</span>
         <h2 class="modal-comp-title">${data.title}</h2>
         <p class="modal-comp-desc">${data.tagline}</p>
       </div>
@@ -1422,26 +1432,47 @@
         ${tabsHtml}
       </div>
 
-      <div class="modal-split-viewer-header">
-        <span class="modal-split-title" id="modalSplitViewerTitle">${data.title}</span>
-        <div class="modal-split-controls-pills">
-          <button class="modal-split-btn" data-modal-mode="wireframe">Before Only</button>
-          <button class="modal-split-btn active" data-modal-mode="split">50 / 50 Split</button>
-          <button class="modal-split-btn" data-modal-mode="hifi">After UI</button>
+      <!-- Side-by-Side Parallel Screens Showcase -->
+      <div class="modal-parallel-showcase">
+        <!-- Before Screen Card -->
+        <div class="parallel-screen-card before-card">
+          <div class="parallel-card-header">
+            <span class="parallel-status-badge before">⚠️ BEFORE</span>
+            <span style="font-size: 12px; color: var(--ink-500); font-weight: 600;">Legacy Baseline</span>
+          </div>
+          <div class="parallel-card-title">${data.beforeBadge}</div>
+          <div class="parallel-device-frame" data-zoom-src="${data.beforeImg}" data-zoom-label="${data.beforeBadge}" title="Click to view full screen">
+            <img src="${data.beforeImg}" alt="Before Screen" class="parallel-screen-img" loading="lazy">
+            <span class="parallel-zoom-hint">🔍 Click to zoom</span>
+          </div>
+          <div class="parallel-screen-caption">
+            <div class="parallel-caption-tag">User Friction Identified</div>
+            <p class="parallel-caption-text">${data.beforeDesc || 'Legacy interaction flow with user friction and cognitive overload.'}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="modal-comparison-slider-box" id="modalComparisonSlider" title="Drag horizontally or click tabs to compare before & after">
-        <div class="modal-slider-layer modal-wireframe-layer">
-          <img id="modalCompBeforeImg" src="${data.beforeImg}" alt="Before Screen">
-          <span class="layer-badge-floating right-badge" id="modalCompBeforeBadge">${data.beforeBadge}</span>
+        <!-- Center Divider Arrow -->
+        <div class="parallel-transform-arrow">
+          <div class="arrow-pill">⇄</div>
+          <span class="arrow-label">UX REDESIGN</span>
         </div>
-        <div class="modal-slider-layer modal-hifi-layer" id="modalHifiLayer">
-          <img id="modalCompAfterImg" src="${data.afterImg}" alt="After Screen">
-          <span class="layer-badge-floating left-badge" id="modalCompAfterBadge">${data.afterBadge}</span>
+
+        <!-- After Screen Card -->
+        <div class="parallel-screen-card after-card">
+          <div class="parallel-card-header">
+            <span class="parallel-status-badge after">⚡ AFTER</span>
+            <span style="font-size: 12px; color: #047857; font-weight: 600;">Enhanced Solution</span>
+          </div>
+          <div class="parallel-card-title">${data.afterBadge}</div>
+          <div class="parallel-device-frame" data-zoom-src="${data.afterImg}" data-zoom-label="${data.afterBadge}" title="Click to view full screen">
+            <img src="${data.afterImg}" alt="After Screen" class="parallel-screen-img" loading="lazy">
+            <span class="parallel-zoom-hint">🔍 Click to zoom</span>
+          </div>
+          <div class="parallel-screen-caption">
+            <div class="parallel-caption-tag">UX Breakthrough</div>
+            <p class="parallel-caption-text">${data.afterDesc || 'Streamlined interaction flow, ambient awareness, and zero-friction execution.'}</p>
+          </div>
         </div>
-        <div class="modal-slider-divider-line" id="modalSliderDivider"></div>
-        <div class="modal-slider-handle-knob" id="modalSliderKnob">⇄</div>
       </div>
 
       <div class="modal-insights-grid">
@@ -1462,8 +1493,14 @@
       });
     });
 
-    // Wire up slider interaction inside modal
-    initModalSlider();
+    // Wire up click-to-zoom on device frames
+    beforeAfterModalBody.querySelectorAll('[data-zoom-src]').forEach(frame => {
+      frame.addEventListener('click', () => {
+        const src = frame.dataset.zoomSrc;
+        const label = frame.dataset.zoomLabel;
+        openLightbox(src, label);
+      });
+    });
 
     // Wire up footer buttons
     const caseBtn = document.getElementById('modalGoToCaseStudyBtn');
@@ -1477,71 +1514,6 @@
 
     const dismissBtn = document.getElementById('modalDismissBtn');
     if (dismissBtn) dismissBtn.addEventListener('click', closeBeforeAfterModal);
-  }
-
-  function initModalSlider() {
-    const sliderBox = document.getElementById('modalComparisonSlider');
-    const hifiLayer = document.getElementById('modalHifiLayer');
-    const dividerLine = document.getElementById('modalSliderDivider');
-    const handleKnob = document.getElementById('modalSliderKnob');
-    const modeBtns = beforeAfterModalBody.querySelectorAll('[data-modal-mode]');
-
-    if (!sliderBox || !hifiLayer || !dividerLine || !handleKnob) return;
-
-    let isDragging = false;
-
-    function setModalPosition(percent) {
-      const p = Math.max(0, Math.min(100, percent));
-      hifiLayer.style.clipPath = `polygon(0 0, ${p}% 0, ${p}% 100%, 0 100%)`;
-      dividerLine.style.left = `${p}%`;
-      handleKnob.style.left = `${p}%`;
-    }
-
-    function handleMove(clientX) {
-      const rect = sliderBox.getBoundingClientRect();
-      const x = clientX - rect.left;
-      const percent = (x / rect.width) * 100;
-      setModalPosition(percent);
-    }
-
-    sliderBox.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      handleMove(e.clientX);
-    });
-
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (isDragging) handleMove(e.clientX);
-    });
-
-    sliderBox.addEventListener('touchstart', (e) => {
-      isDragging = true;
-      if (e.touches.length > 0) handleMove(e.touches[0].clientX);
-    }, { passive: true });
-
-    window.addEventListener('touchend', () => {
-      isDragging = false;
-    });
-
-    window.addEventListener('touchmove', (e) => {
-      if (isDragging && e.touches.length > 0) handleMove(e.touches[0].clientX);
-    }, { passive: true });
-
-    modeBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        modeBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const mode = btn.dataset.modalMode;
-        if (mode === 'wireframe') setModalPosition(0);
-        else if (mode === 'split') setModalPosition(50);
-        else if (mode === 'hifi') setModalPosition(100);
-      });
-    });
-
-    setModalPosition(50);
   }
 
   function initBeforeAfterOverlayModal() {
