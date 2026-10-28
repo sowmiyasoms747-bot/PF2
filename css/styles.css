@@ -1835,43 +1835,6 @@ body {
   box-shadow: 0 4px 14px var(--coral-glow);
 }
 
-/* Modal Project Level Selector Tabs */
-.modal-project-nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0 14px;
-}
-
-.modal-project-pill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  background: var(--bg-subtle);
-  border: 1.5px solid rgba(0, 0, 0, 0.08);
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink-700);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.modal-project-pill-btn:hover {
-  background: #ffffff;
-  border-color: var(--coral);
-  color: var(--coral);
-}
-
-.modal-project-pill-btn.active {
-  background: var(--coral);
-  border-color: var(--coral);
-  color: #ffffff;
-  box-shadow: 0 4px 14px var(--coral-glow);
-}
-
 /* Modal Sub-Flow Steps Bar (e.g. BookMyShow 6 Steps) */
 .modal-flow-steps-bar {
   display: flex;
@@ -1881,7 +1844,7 @@ body {
   background: rgba(224, 119, 79, 0.06);
   border: 1px dashed rgba(224, 119, 79, 0.35);
   border-radius: 14px;
-  margin-bottom: 22px;
+  margin: 18px 0 22px;
   align-items: center;
 }
 

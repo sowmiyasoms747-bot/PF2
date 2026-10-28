@@ -1477,13 +1477,6 @@
   const beforeAfterModalBody = document.getElementById('beforeAfterModalBody');
   const beforeAfterCloseBtn = document.getElementById('beforeAfterModalCloseBtn');
 
-  const PROJECTS_LIST = [
-    { key: 'bms', label: '🎬 BookMyShow (6 Flows)', defaultComp: 'bms_ai_booking' },
-    { key: 'parkshare', label: '🚗 Park Share', defaultComp: 'parkshare_fit' },
-    { key: 'sensory', label: '🗺️ Sensory Mapping', defaultComp: 'sensory_route' },
-    { key: 'gpay', label: '💳 Google Pay', defaultComp: 'gpay_spend' }
-  ];
-
   const BMS_STEPS = [
     { key: 'bms_ai_booking', label: '1. AI Option' },
     { key: 'bms_date', label: '2. Date Select' },
@@ -1515,13 +1508,7 @@
     activeCompareKey = compKey;
     const currentProjectKey = data.projectKey || 'bms';
 
-    // 1. Top Project level tabs
-    const projectTabsHtml = PROJECTS_LIST.map(p => {
-      const isActive = p.key === currentProjectKey ? 'active' : '';
-      return `<button class="modal-project-pill-btn ${isActive}" data-switch-project="${p.key}" data-target-comp="${p.defaultComp}">${p.label}</button>`;
-    }).join('');
-
-    // 2. If BookMyShow is active, render the 6 sub-steps journey flow
+    // If BookMyShow is active, render its dedicated 6 sub-steps journey flow
     let subFlowHtml = '';
     if (currentProjectKey === 'bms') {
       const stepsHtml = BMS_STEPS.map(s => {
@@ -1550,12 +1537,7 @@
         <p class="modal-comp-desc">${data.tagline}</p>
       </div>
 
-      <!-- Top Project Level Tabs -->
-      <div class="modal-project-nav-bar">
-        ${projectTabsHtml}
-      </div>
-
-      <!-- Sub-Flow Journey Steps Bar -->
+      <!-- Sub-Flow Journey Steps Bar (Only if project has multi-step flow) -->
       ${subFlowHtml}
 
       <!-- Side-by-Side Parallel Screens Showcase -->
@@ -1610,14 +1592,6 @@
         <button class="btn-secondary" id="modalDismissBtn">Close Viewer</button>
       </div>
     `;
-
-    // Wire up project switcher tabs
-    beforeAfterModalBody.querySelectorAll('[data-switch-project]').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const targetComp = tab.dataset.targetComp;
-        renderBeforeAfterModalContent(targetComp);
-      });
-    });
 
     // Wire up sub-flow step buttons
     beforeAfterModalBody.querySelectorAll('[data-switch-comp]').forEach(tab => {
