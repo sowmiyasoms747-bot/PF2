@@ -163,7 +163,7 @@
             </div>
             <div class="project-actions">
               <button class="btn-primary" data-open-case="park_share">Read Case Study →</button>
-              <a href="#wireframe-hifi" class="btn-secondary">Compare Screens</a>
+              <button class="btn-secondary" data-open-compare="parkshare_fit">Compare Screens ⇄</button>
             </div>
           </div>
         </article>
@@ -300,7 +300,7 @@
             </div>
             <div class="project-actions">
               <button class="btn-primary" data-open-case="bookmyshow">Read Case Study →</button>
-              <a href="#wireframe-hifi" class="btn-secondary">View Before / After</a>
+              <button class="btn-secondary" data-open-compare="bms_slots">View Before / After ⇄</button>
             </div>
           </div>
         </article>
@@ -346,6 +346,7 @@
             </div>
             <div class="project-actions">
               <button class="btn-primary" data-open-case="sensory_mapping">Read Case Study →</button>
+              <button class="btn-secondary" data-open-compare="sensory_route">View Before / After ⇄</button>
             </div>
           </div>
         </article>
@@ -391,6 +392,7 @@
             </div>
             <div class="project-actions">
               <button class="btn-primary" data-open-case="gpay">Read Case Study →</button>
+              <button class="btn-secondary" data-open-compare="gpay_spend">View Before / After ⇄</button>
             </div>
           </div>
         </article>
@@ -780,6 +782,16 @@
     <div class="case-modal-container">
       <button class="modal-close-btn" aria-label="Close Case Study">&times;</button>
       <div class="modal-content-body">
+        <!-- Dynamically injected via js/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Before & After Comparison Modal Overlay -->
+  <div class="case-modal-overlay before-after-modal-overlay" id="beforeAfterModal" role="dialog" aria-modal="true" aria-label="Before and After UX Comparison">
+    <div class="case-modal-container before-after-modal-container">
+      <button class="modal-close-btn" id="beforeAfterModalCloseBtn" aria-label="Close Comparison Viewer">&times;</button>
+      <div class="modal-content-body before-after-modal-body" id="beforeAfterModalBody">
         <!-- Dynamically injected via js/main.js -->
       </div>
     </div>

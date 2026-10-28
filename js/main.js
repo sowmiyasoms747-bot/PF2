@@ -1099,6 +1099,10 @@
     if (e.key === 'Escape') {
       if (zoomOverlay && zoomOverlay.classList.contains('active')) {
         zoomOverlay.classList.remove('active');
+      } else if (document.getElementById('beforeAfterModal') && document.getElementById('beforeAfterModal').classList.contains('active')) {
+        const modal = document.getElementById('beforeAfterModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
       } else {
         closeCaseModal();
       }
@@ -1231,11 +1235,31 @@
   }
 
   // =========================================================================
-  // 9. Interactive Before / After Comparison Tabs Switcher
+  // 9. Interactive Before / After Comparison Data & Overlay Modal Controller
   // =========================================================================
   const COMPARISONS = {
+    parkshare_fit: {
+      caseId: 'park_share',
+      tabLabel: '🚗 Park Share: Vehicle Dimension Fit-Check',
+      tag: '🚗 NEXZWARE INTERNSHIP',
+      title: 'Park Share • Space Guesswork vs Vehicle Dimension Fit-Check',
+      tagline: 'Eliminating parking anxiety by dynamically matching vehicle dimensions (length, width, height) with host parking bay measurements before reservation.',
+      beforeImg: 'assets/images/Parkshare/User fit check not fit.png',
+      afterImg: 'assets/images/Parkshare/User fit check fits. .png',
+      beforeBadge: '❌ Before: Vehicle Dimension Exceeds Space',
+      afterBadge: '✅ After: Dynamic Fit Verification (Fits Confirmed)',
+      insights: [
+        { icon: '📐', title: 'Dynamic Dimension Calculator', desc: 'Pre-checks car dimensions against parking space bounds in milliseconds, preventing arrival mismatch.' },
+        { icon: '⏱️', title: '+34% Faster Booking Speed', desc: 'Commuters reserve pre-verified bays in seconds without back-and-forth owner messages.' },
+        { icon: '🛡️', title: '94% Task Success Rate', desc: 'Eliminated circling anxiety and booking cancellations across 24 field user interviews.' }
+      ]
+    },
     bms_slots: {
-      title: 'BookMyShow • Legacy 1 Slot vs AI 2 Slots',
+      caseId: 'bookmyshow',
+      tabLabel: '🎬 BookMyShow: Time Slot Selection',
+      tag: '🎬 ACADEMIC CASE STUDY',
+      title: 'BookMyShow • Single Slot Constraint vs AI Smart Multi-Slot Fallback',
+      tagline: 'Reinventing blockbuster movie ticket booking by introducing secondary preferences upfront, eliminating checkout drop-offs when high-demand seats sell out.',
       beforeImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/Before 1 time slot.png',
       afterImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/After AI 2 time slot.png',
       beforeBadge: '⚠️ Before: Single Time Slot Constraint',
@@ -1247,7 +1271,11 @@
       ]
     },
     sensory_route: {
+      caseId: 'sensory_mapping',
+      tabLabel: '🗺️ Sensory Mapping: Calm Route Navigation',
+      tag: '🗺️ ACADEMIC CASE STUDY',
       title: 'Sensory Mapping • Standard Route vs Environmental Overlay',
+      tagline: 'A thoughtful environmental route navigation feature for neurodiverse and sensory-sensitive travelers, offering noise/crowd heatmaps and calm alternative routes.',
       beforeImg: 'assets/images/casestudy/sensory mapping/comparison screens/Og screen.jpeg',
       afterImg: 'assets/images/casestudy/sensory mapping/comparison screens/New added feature screen.png',
       beforeBadge: '🚗 Before: Standard Google Maps Route',
@@ -1259,7 +1287,11 @@
       ]
     },
     gpay_spend: {
-      title: 'Google Pay • Standard Payment vs Today\'s Spend Indicator',
+      caseId: 'gpay',
+      tabLabel: '💳 Google Pay: Today\'s Spend Awareness',
+      tag: '💳 ACADEMIC CASE STUDY',
+      title: 'Google Pay • Static Payment Amount vs Today\'s Spend Indicator',
+      tagline: 'Embedding ambient daily spending awareness directly into payment confirmation screens to curb unconscious impulse spending without demanding manual budgeting.',
       beforeImg: 'assets/images/casestudy/G-pay/camparsion/old version.png',
       afterImg: 'assets/images/casestudy/G-pay/camparsion/New feature added version.png',
       beforeBadge: '⚪ Before: Static Payment Amount Only',
@@ -1271,7 +1303,11 @@
       ]
     },
     bms_payment: {
-      title: 'BookMyShow • Manual Payment vs AI Autopay Pre-authorization',
+      caseId: 'bookmyshow',
+      tabLabel: '🎟️ BookMyShow: Pre-Authorized Autopay',
+      tag: '🎟️ ACADEMIC CASE STUDY',
+      title: 'BookMyShow • Manual Payment Gateway vs 1-Tap UPI Pre-Authorization',
+      tagline: 'Re-engineering rush-hour booking by escrowing pre-authorized UPI mandates, locking in seats instantly without waiting in gateway queues.',
       beforeImg: 'assets/images/casestudy/Bookmyshow/payment/Before payment.png',
       afterImg: 'assets/images/casestudy/Bookmyshow/payment/After New feature auto payment.png',
       beforeBadge: '⏳ Before: Manual Gateway Redirect Checkout',
@@ -1284,6 +1320,7 @@
     }
   };
 
+  // Section comparison tabs on page
   function initComparisonTabs() {
     const compTabs = document.querySelectorAll('.comp-tab-btn');
     const compBeforeImg = document.getElementById('compBeforeImg');
@@ -1329,6 +1366,199 @@
           compBeforeImg.style.opacity = '1';
           compAfterImg.style.opacity = '1';
         }, 150);
+      });
+    });
+  }
+
+  // =========================================================================
+  // 9b. Before / After Overlay Modal Controller
+  // =========================================================================
+  const beforeAfterModalOverlay = document.getElementById('beforeAfterModal');
+  const beforeAfterModalBody = document.getElementById('beforeAfterModalBody');
+  const beforeAfterCloseBtn = document.getElementById('beforeAfterModalCloseBtn');
+
+  let activeCompareKey = 'bms_slots';
+
+  function openBeforeAfterModal(compKey) {
+    if (!beforeAfterModalOverlay || !beforeAfterModalBody) return;
+    activeCompareKey = COMPARISONS[compKey] ? compKey : 'bms_slots';
+    renderBeforeAfterModalContent(activeCompareKey);
+    beforeAfterModalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBeforeAfterModal() {
+    if (beforeAfterModalOverlay) {
+      beforeAfterModalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function renderBeforeAfterModalContent(compKey) {
+    const data = COMPARISONS[compKey] || COMPARISONS['bms_slots'];
+    activeCompareKey = compKey;
+
+    const tabsHtml = Object.keys(COMPARISONS).map(k => {
+      const item = COMPARISONS[k];
+      const isActive = k === compKey ? 'active' : '';
+      return `<button class="modal-comp-tab-btn ${isActive}" data-switch-comp="${k}">${item.tabLabel || item.title}</button>`;
+    }).join('');
+
+    const insightsHtml = (data.insights || []).map(ins => `
+      <div class="modal-insight-card">
+        <h4><span>${ins.icon}</span> ${ins.title}</h4>
+        <p>${ins.desc}</p>
+      </div>
+    `).join('');
+
+    beforeAfterModalBody.innerHTML = `
+      <div class="modal-comp-header">
+        <span class="section-tag">${data.tag || '✦ INTERACTIVE COMPARISON'}</span>
+        <h2 class="modal-comp-title">${data.title}</h2>
+        <p class="modal-comp-desc">${data.tagline}</p>
+      </div>
+
+      <div class="modal-comp-tabs-bar">
+        ${tabsHtml}
+      </div>
+
+      <div class="modal-split-viewer-header">
+        <span class="modal-split-title" id="modalSplitViewerTitle">${data.title}</span>
+        <div class="modal-split-controls-pills">
+          <button class="modal-split-btn" data-modal-mode="wireframe">Before Only</button>
+          <button class="modal-split-btn active" data-modal-mode="split">50 / 50 Split</button>
+          <button class="modal-split-btn" data-modal-mode="hifi">After UI</button>
+        </div>
+      </div>
+
+      <div class="modal-comparison-slider-box" id="modalComparisonSlider" title="Drag horizontally or click tabs to compare before & after">
+        <div class="modal-slider-layer modal-wireframe-layer">
+          <img id="modalCompBeforeImg" src="${data.beforeImg}" alt="Before Screen">
+          <span class="layer-badge-floating right-badge" id="modalCompBeforeBadge">${data.beforeBadge}</span>
+        </div>
+        <div class="modal-slider-layer modal-hifi-layer" id="modalHifiLayer">
+          <img id="modalCompAfterImg" src="${data.afterImg}" alt="After Screen">
+          <span class="layer-badge-floating left-badge" id="modalCompAfterBadge">${data.afterBadge}</span>
+        </div>
+        <div class="modal-slider-divider-line" id="modalSliderDivider"></div>
+        <div class="modal-slider-handle-knob" id="modalSliderKnob">⇄</div>
+      </div>
+
+      <div class="modal-insights-grid">
+        ${insightsHtml}
+      </div>
+
+      <div class="modal-comp-footer" style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--ink-100); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+        <button class="btn-primary" id="modalGoToCaseStudyBtn" data-case="${data.caseId}">Read Full Case Study →</button>
+        <button class="btn-secondary" id="modalDismissBtn">Close Viewer</button>
+      </div>
+    `;
+
+    // Wire up tab buttons inside modal
+    beforeAfterModalBody.querySelectorAll('[data-switch-comp]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const nextKey = tab.dataset.switchComp;
+        renderBeforeAfterModalContent(nextKey);
+      });
+    });
+
+    // Wire up slider interaction inside modal
+    initModalSlider();
+
+    // Wire up footer buttons
+    const caseBtn = document.getElementById('modalGoToCaseStudyBtn');
+    if (caseBtn) {
+      caseBtn.addEventListener('click', () => {
+        const targetCase = caseBtn.dataset.case;
+        closeBeforeAfterModal();
+        setTimeout(() => openCaseModal(targetCase), 150);
+      });
+    }
+
+    const dismissBtn = document.getElementById('modalDismissBtn');
+    if (dismissBtn) dismissBtn.addEventListener('click', closeBeforeAfterModal);
+  }
+
+  function initModalSlider() {
+    const sliderBox = document.getElementById('modalComparisonSlider');
+    const hifiLayer = document.getElementById('modalHifiLayer');
+    const dividerLine = document.getElementById('modalSliderDivider');
+    const handleKnob = document.getElementById('modalSliderKnob');
+    const modeBtns = beforeAfterModalBody.querySelectorAll('[data-modal-mode]');
+
+    if (!sliderBox || !hifiLayer || !dividerLine || !handleKnob) return;
+
+    let isDragging = false;
+
+    function setModalPosition(percent) {
+      const p = Math.max(0, Math.min(100, percent));
+      hifiLayer.style.clipPath = `polygon(0 0, ${p}% 0, ${p}% 100%, 0 100%)`;
+      dividerLine.style.left = `${p}%`;
+      handleKnob.style.left = `${p}%`;
+    }
+
+    function handleMove(clientX) {
+      const rect = sliderBox.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const percent = (x / rect.width) * 100;
+      setModalPosition(percent);
+    }
+
+    sliderBox.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      handleMove(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) handleMove(e.clientX);
+    });
+
+    sliderBox.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      if (e.touches.length > 0) handleMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging && e.touches.length > 0) handleMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    modeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const mode = btn.dataset.modalMode;
+        if (mode === 'wireframe') setModalPosition(0);
+        else if (mode === 'split') setModalPosition(50);
+        else if (mode === 'hifi') setModalPosition(100);
+      });
+    });
+
+    setModalPosition(50);
+  }
+
+  function initBeforeAfterOverlayModal() {
+    if (beforeAfterCloseBtn) beforeAfterCloseBtn.addEventListener('click', closeBeforeAfterModal);
+    if (beforeAfterModalOverlay) {
+      beforeAfterModalOverlay.addEventListener('click', (e) => {
+        if (e.target === beforeAfterModalOverlay) closeBeforeAfterModal();
+      });
+    }
+
+    // Attach to all Compare Screens / View Before After buttons
+    document.querySelectorAll('[data-open-compare]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const compKey = btn.dataset.openCompare;
+        openBeforeAfterModal(compKey);
       });
     });
   }
@@ -1553,6 +1783,7 @@
     initProjectFilters();
     initStackedCardsParallax();
     initComparisonTabs();
+    initBeforeAfterOverlayModal();
     initCuteFigmaInteractions();
   });
 
