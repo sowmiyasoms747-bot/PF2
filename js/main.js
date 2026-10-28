@@ -214,17 +214,65 @@
         }
       ],
       gallery: [
-        { src: 'assets/images/Parkshare/Select user or owner.png', label: 'Dual Role Onboarding' },
-        { src: 'assets/images/Parkshare/User home .png', label: 'User Map & Nearby Bays' },
+        // Driver Onboarding & Authentication
+        { src: 'assets/images/Parkshare/Nexzware (1)/splash screen1.png', label: 'Splash Screen & Brand Identity' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Logo page2.png', label: 'Welcome & Value Proposition' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/nearby intro3.png', label: 'Geo-Discovery & Bay Search Intro' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/booking Intro4.png', label: 'Guaranteed Bay Booking Intro' },
+        { src: 'assets/images/Parkshare/Select user or owner.png', label: 'Dual Role Onboarding (Driver vs Host)' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/login.png', label: 'Account Sign In' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Password text5.png', label: 'Secure Password Verification' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Name Text box7.png', label: 'Driver Profile Registration' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Photo9.png', label: 'Driver Photo Verification' },
+        // Driver Map & Search Experience
+        { src: 'assets/images/Parkshare/User home .png', label: 'Driver Map & Nearby Bays' },
         { src: 'assets/images/Parkshare/User place search.png', label: 'Destination Rate Search' },
-        { src: 'assets/images/Parkshare/User vehicle info .png', label: 'Vehicle Specs Setup' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Home11-1.png', label: 'Active Search & Geo-Filter' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Home11-2.png', label: 'Pin Clusters & Live Cards' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/search result 12-1.png', label: 'Filtered Search Results' },
+        // Vehicle Profile & Dynamic Fit-Check
+        { src: 'assets/images/Parkshare/User vehicle info .png', label: 'Vehicle Specs Garage' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Filling Vechicle infor10.png', label: 'Dimension Input (L × W × H)' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Vechicle.png', label: 'Registered Vehicle Profile' },
         { src: 'assets/images/Parkshare/User fit check fits. .png', label: 'Fit Check: Verified Clearance' },
         { src: 'assets/images/Parkshare/User fit check not fit.png', label: 'Fit Check: Clearance Warning' },
-        { src: 'assets/images/Parkshare/User prefernce setting.png', label: 'Amenities & Security Filters' },
+        // Bay Details & Amenities
+        { src: 'assets/images/Parkshare/Nexzware (1)/Parking Place12-2.png', label: 'Parking Bay Overview' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Parking Place12-2-1.png', label: 'Bay Photo Gallery & Entry' },
+        { src: 'assets/images/Parkshare/User prefernce setting.png', label: 'Security & EV Amenities' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Amenities12.png', label: 'Gated Access & CCTV Filters' },
+        // Reservation & Rates
+        { src: 'assets/images/Parkshare/Nexzware (1)/Date and time 12-3.png', label: 'Date & Arrival Time Selection' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Date and time 12-3-1.png', label: 'Hourly Duration Selector' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Date and time 12-3-2.png', label: 'Transparent Rate Breakdown' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/booking confirmation 12-4.png', label: 'Booking Confirmation & QR Pass' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Booking13.png', label: 'Active Parking Reservation' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Booking13-1.png', label: 'Turn-by-Turn Navigation' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Booking13-2.png', label: 'Parking Timer & Extension' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/after location.png', label: 'Arrival Entry Navigation' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/review13.png', label: 'Host Rating & Driver Review' },
+        // Messaging & Payments
+        { src: 'assets/images/Parkshare/Nexzware (1)/Inbox19.png', label: 'Host Communication Hub' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Inbox msg.png', label: 'Direct Chat with Host' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/profile -_ payment.png', label: 'Payment Methods & Wallets' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/profile -_ payment-1.png', label: 'Add UPI & Card Details' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Rental11.png', label: 'Monthly Parking Lease' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Rental11-1.png', label: 'Dedicated Bay Pass Terms' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Profile15.png', label: 'Driver Profile & History' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/profile edit.png', label: 'Account Settings & Preferences' },
+        // Space Host / Owner Platform
         { src: 'assets/images/Parkshare/owner home.png', label: 'Host Driveway Dashboard' },
-        { src: 'assets/images/Parkshare/owner Parking details.png', label: 'Host Pricing & Rules' },
-        { src: 'assets/images/Parkshare/owner fix hight weight.png', label: 'Host Dimension Limits' },
-        { src: 'assets/images/Parkshare/owner parking place details.png', label: 'Host Access Guidelines' }
+        { src: 'assets/images/Parkshare/Nexzware (1)/home-1.png', label: 'Live Bay Status & Revenue' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/New parking -_ Tell us about you.png', label: 'Host Space Registration' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/New parking -_ Tell us about you place detail.png', label: 'Driveway Address & Entry' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/Place details10.png', label: 'Bay Photo Upload' },
+        { src: 'assets/images/Parkshare/owner Parking details.png', label: 'Hourly & Daily Pricing Rules' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/New parking -_ rental option and pricing-1.png', label: 'Peak Surge Rates' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/New parking -_ rental option and pricing-2.png', label: 'Weekend Availability Rules' },
+        { src: 'assets/images/Parkshare/owner fix hight weight.png', label: 'Host Overhead Clearance Limits' },
+        { src: 'assets/images/Parkshare/owner parking place details.png', label: 'Access Guidelines & Security' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/2 paking.png', label: 'Multi-Slot Management' },
+        { src: 'assets/images/Parkshare/Nexzware (1)/discritpion.png', label: 'Host Rules & Instructions' }
       ]
     },
 
@@ -261,15 +309,44 @@
         }
       ],
       gallery: [
-        { src: 'assets/images/Fitness trainer/user and trainer.png', label: 'Client / Trainer Selection' },
-        { src: 'assets/images/Fitness trainer/user home.png', label: 'Client Fitness Dashboard' },
-        { src: 'assets/images/Fitness trainer/user side trainer details.png', label: 'Trainer Profile & Certs' },
-        { src: 'assets/images/Fitness trainer/user sesssion option.png', label: 'Session Package Options' },
-        { src: 'assets/images/Fitness trainer/user side trainer next sesssion booking.png', label: 'Live Calendar Scheduling' },
-        { src: 'assets/images/Fitness trainer/tranier home.png', label: 'Trainer Daily Roster' },
-        { src: 'assets/images/Fitness trainer/tranier client info view.png', label: 'Client Health Metrics' },
-        { src: 'assets/images/Fitness trainer/tranier client specific session info. .png', label: 'Custom Session Plan' },
-        { src: 'assets/images/Fitness trainer/trainer earing.png', label: 'Trainer Monthly Earnings' }
+        // Client & Coach Onboarding Funnel
+        { src: 'assets/images/Fitness trainer/Fitness trainig/intro 1.png', label: 'Onboarding: Fitness Goals & Level' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/intro 2.png', label: 'Onboarding: Workout Focus' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/intro 3.png', label: 'Onboarding: Schedule & Coach Match' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/intro 4.png', label: 'Onboarding: Coach Discovery Intro' },
+        { src: 'assets/images/Fitness trainer/user and trainer.png', label: 'Role Selection: Client vs Coach' },
+        // Client Sign In & Registration
+        { src: 'assets/images/Fitness trainer/Fitness trainig/sign in 1.png', label: 'Client Sign In Screen' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/create account 1.png', label: 'Client Account Registration' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/otp 1.png', label: 'Client OTP Verification' },
+        // Client Workout & Booking Experience
+        { src: 'assets/images/Fitness trainer/user home.png', label: 'Client Workout Dashboard' },
+        { src: 'assets/images/Fitness trainer/user side trainer details.png', label: 'Trainer Profile & Certifications' },
+        { src: 'assets/images/Fitness trainer/user sesssion option.png', label: 'Session Packages & Pricing' },
+        { src: 'assets/images/Fitness trainer/user side trainer next sesssion booking.png', label: 'Live Session Calendar Booking' },
+        // Coach Profile & Registration
+        { src: 'assets/images/Fitness trainer/Fitness trainig/create account 2.png', label: 'Coach Account Registration' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/create account filled 2.png', label: 'Coach Experience & Specialities' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/otp 2.png', label: 'Coach Mobile OTP Verification' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/Address.png', label: 'Gym & Studio Location Setup' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/add certificate.png', label: 'Coach Certification Verification' },
+        // Coach Services & Availability Config
+        { src: 'assets/images/Fitness trainer/Fitness trainig/add your service-_.png', label: 'Coach Service Listing' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/add your service-_ set availability.png', label: 'Weekly Schedule Availability' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/add your service-_ set availability-_ time.png', label: 'Daily Time Slot Configuration' },
+        // Coach Operations & Management
+        { src: 'assets/images/Fitness trainer/tranier home.png', label: 'Coach Command Dashboard' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/trainer profile.png', label: 'Coach Public Profile & Bio' },
+        { src: 'assets/images/Fitness trainer/tranier client info view.png', label: 'Client Assessment & Vitals' },
+        { src: 'assets/images/Fitness trainer/tranier client specific session info. .png', label: 'Personalized Workout Plan' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/tranier home -_resuchudule.png', label: 'Session Reschedule Request' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/tranier home -_resuchudule  -_ time.png', label: 'Reschedule Slot Selection' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/trainer profile-_ earning-_ overview.png', label: 'Coach Earnings & Analytics' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/trainer profile-_ earning-_ transaction.png', label: 'Payout Transaction Ledger' },
+        // Client Profile & Settings
+        { src: 'assets/images/Fitness trainer/Fitness trainig/profile1.png', label: 'Client Fitness Preferences' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/profile2.png', label: 'Membership & Active Passes' },
+        { src: 'assets/images/Fitness trainer/Fitness trainig/profile.png', label: 'Profile Overview & Account Settings' }
       ]
     },
 
@@ -306,18 +383,66 @@
         }
       ],
       gallery: [
-        { src: 'assets/images/TNGSA/Language.png', label: 'Bilingual Language Select' },
-        { src: 'assets/images/TNGSA/Home teacher .png', label: 'Teacher Home Dashboard' },
-        { src: 'assets/images/TNGSA/Attendance confirmation.png', label: '1-Tap Daily Roll Call' },
+        // Bilingual Language & Authentication
+        { src: 'assets/images/TNGSA/Language.png', label: 'Bilingual Language Switcher (தமிழ் / English)' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Login.png', label: 'Teacher Staff Login' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Login 2.png', label: 'District EMIS Portal Sign In' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Login 4.png', label: 'School Identification Code' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Login 5.png', label: 'Teacher OTP Verification' },
+        { src: 'assets/images/TNGSA/Attendance (2)/HM Login 1.png', label: 'Headmaster Administrative Portal' },
+        { src: 'assets/images/TNGSA/Attendance (2)/HM Login 2.png', label: 'Headmaster Two-Factor Authentication' },
+        // Classroom Attendance Flow (Teacher)
+        { src: 'assets/images/TNGSA/Home teacher .png', label: 'Teacher Classroom Command Center' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Home-1.png', label: 'Morning Session Classroom Roster' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance.png', label: '1-Tap Attendance Roll Call' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance absent.png', label: 'Student Absence Tally' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance leave.png', label: 'Medical & Sanctioned Leaves' },
         { src: 'assets/images/TNGSA/Attendance correction.png', label: 'Attendance Audit & Correction' },
-        { src: 'assets/images/TNGSA/Attendance leave.png', label: 'Leave & Sick Tracking' },
-        { src: 'assets/images/TNGSA/SMS.png', label: 'Automated Parent Absence SMS' },
-        { src: 'assets/images/TNGSA/Head Mister.png', label: 'Headmaster Administrative Analytics' },
-        { src: 'assets/images/TNGSA/Manage.png', label: 'Class & Staff Management' },
-        { src: 'assets/images/TNGSA/Add New Class.png', label: 'Add Class Setup' },
-        { src: 'assets/images/TNGSA/Add New Class 2.png', label: 'Class Curriculum Mapping' },
-        { src: 'assets/images/TNGSA/Add Teacher.png', label: 'Teacher Faculty Registration' },
-        { src: 'assets/images/TNGSA/Import from Excel.png', label: 'Bulk Student Excel Import' }
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance confirmation.png', label: 'Daily Register Summary' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance confirmation-1.png', label: 'Mid-Day Meal Headcount Verification' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance confirmation-2.png', label: 'Gender Attendance Breakdown' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance confirmation-3.png', label: 'Teacher Digital Signature' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Attendance confirmation-4.png', label: 'Cloud Synchronization Confirmation' },
+        { src: 'assets/images/TNGSA/Attendance (2)/After Confirmation.png', label: 'Daily Attendance Locked' },
+        { src: 'assets/images/TNGSA/SMS.png', label: 'Automated Parent Absence SMS Alert' },
+        // Class & Section Administration
+        { src: 'assets/images/TNGSA/Attendance (2)/Classes & Sections.png', label: 'Standard & Grade Directory' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Classes & Sections-1.png', label: 'Standards 1 to 10 Sections' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Classes & Sections-2.png', label: 'Language Medium Allocation' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Class 6 - Section.png', label: 'Class Student Roster Inspection' },
+        { src: 'assets/images/TNGSA/Add New Class.png', label: 'Create New Academic Class' },
+        { src: 'assets/images/TNGSA/Add New Class 2.png', label: 'Subject & Classroom Assignment' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Add section.png', label: 'Add Section Configuration' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Deactivate Section.png', label: 'Section Archival & Status' },
+        // Faculty Management & Roster
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Management.png', label: 'Faculty Staff Directory' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Management-1.png', label: 'Teacher Qualifications & EMIS' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Management-2.png', label: 'Subject & Period Allocation' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Management-3.png', label: 'Leave & Substitution Management' },
+        { src: 'assets/images/TNGSA/Add Teacher.png', label: 'Register New Faculty Member' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Add Teacher-1.png', label: 'Personal Information Entry' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Add Teacher-2.png', label: 'Degrees & Qualifications' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Add Teacher-3.png', label: 'Designation & Pay Scale' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Add Teacher-4.png', label: 'EMIS Teacher ID Verification' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Assignment.png', label: 'Class Teacher Assignment' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Assignment-1.png', label: 'Substitute Teacher Quick-Assign' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Teacher Assignment-2.png', label: 'Weekly Timetable Mapping' },
+        // Bulk Student Roster Import (Excel)
+        { src: 'assets/images/TNGSA/Import from Excel.png', label: 'Bulk Student Excel Import' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Import from Excel-1.png', label: 'Column Mapping (Name, Roll, Aadhaar)' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Import from Excel-2.png', label: 'Data Parsing & Validation' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Import from Excel-3.png', label: 'Error & Duplicate Detection' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Import Valid Records.png', label: 'Validated Records Preview' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Import Valid Records-1.png', label: 'Inline Data Correction' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Import Valid Records completed.png', label: 'Roster Successfully Imported' },
+        // Headmaster & Administrative Analytics
+        { src: 'assets/images/TNGSA/Head Mister.png', label: 'Headmaster Analytics Dashboard' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Today school status.png', label: 'Live School-Wide Roll Call Status' },
+        { src: 'assets/images/TNGSA/Attendance (2)/student Management.png', label: 'Student Database & Records' },
+        { src: 'assets/images/TNGSA/Attendance (2)/School Details.png', label: 'School Information & Capacity' },
+        { src: 'assets/images/TNGSA/Manage.png', label: 'Administrative Control Center' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Manage-1.png', label: 'Official Attendance Register Export' },
+        { src: 'assets/images/TNGSA/Attendance (2)/Monitor.png', label: 'Real-Time District Monitoring' }
       ]
     },
 
@@ -372,7 +497,9 @@
         { src: 'assets/images/casestudy/Bookmyshow/APP/debit cards autopay enabled confirmation 15.png', label: 'Debit Autopay Verified' },
         { src: 'assets/images/casestudy/Bookmyshow/APP/autopay setting for UPI  id verified save 16.png', label: 'UPI Autopay Mandate Setup' },
         { src: 'assets/images/casestudy/Bookmyshow/APP/UPI autopay enable confirmation 17.png', label: 'UPI Autopay Confirmed' },
-        { src: 'assets/images/casestudy/Bookmyshow/APP/Prebooking confirmation 18.png', label: 'Rush Booking Locked In' }
+        { src: 'assets/images/casestudy/Bookmyshow/APP/Prebooking confirmation 18.png', label: 'Rush Booking Locked In' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/profile page 19.png', label: 'User Booking History & Passes' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/pre booked 20.png', label: 'Pre-Booked Active Status' }
       ]
     },
 
