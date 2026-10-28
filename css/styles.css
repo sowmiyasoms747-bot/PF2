@@ -649,6 +649,44 @@ body {
    Selected Work & Case Studies
    ========================================================================== */
 
+/* Filter Tabs Bar */
+.projects-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.filter-tab-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-700);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--ink-900);
+  transform: translateY(-1px);
+}
+
+.filter-tab-btn.active {
+  background: var(--coral);
+  color: #ffffff;
+  border-color: var(--coral);
+  box-shadow: 0 4px 14px var(--coral-glow);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -661,9 +699,13 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: var(--transition-smooth);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
   display: flex;
   flex-direction: column;
+}
+
+.project-card.is-hidden {
+  display: none !important;
 }
 
 .project-card:hover {
@@ -683,48 +725,117 @@ body {
   grid-column: span 6;
 }
 
+.project-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.project-category-badge.internship {
+  color: #0d6e53;
+  background: #e2f5ee;
+  border: 1px solid rgba(13, 110, 83, 0.2);
+}
+
+.project-category-badge.casestudy {
+  color: #633cd6;
+  background: #f0ecfc;
+  border: 1px solid rgba(99, 60, 214, 0.2);
+}
+
+/* Device Multi-Phone Stack Showcase */
 .project-visual {
   position: relative;
-  background: #f5eee6;
+  background: linear-gradient(145deg, #fbf4ee 0%, #ede1d4 100%);
   overflow: hidden;
-  aspect-ratio: 16 / 10;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  gap: 12px;
+  padding: 32px 16px 0;
+  min-height: 310px;
 }
 
 .project-card.featured .project-visual {
   height: 100%;
-  aspect-ratio: unset;
   min-height: 440px;
+  padding: 42px 24px 0;
+  gap: 16px;
 }
 
-.project-visual img {
+.device-screen-mockup {
+  position: relative;
+  width: 140px;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 16px 36px -6px rgba(50, 25, 10, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  background: #ffffff;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.device-screen-mockup img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  height: auto;
+  display: block;
+  user-select: none;
 }
 
-.project-card:hover .project-visual img {
-  transform: scale(1.03);
+.device-screen-mockup.side-left {
+  transform: translateY(22px) rotate(-3.5deg);
+  opacity: 0.94;
+}
+
+.device-screen-mockup.side-right {
+  transform: translateY(22px) rotate(3.5deg);
+  opacity: 0.94;
+}
+
+.device-screen-mockup.center-primary {
+  transform: translateY(0) scale(1.05);
+  z-index: 2;
+  box-shadow: 0 22px 46px -6px rgba(50, 25, 10, 0.28), 0 0 0 1.5px rgba(255, 255, 255, 0.95);
+}
+
+.project-card:hover .device-screen-mockup.side-left {
+  transform: translateY(8px) rotate(-4.5deg);
+}
+
+.project-card:hover .device-screen-mockup.side-right {
+  transform: translateY(8px) rotate(4.5deg);
+}
+
+.project-card:hover .device-screen-mockup.center-primary {
+  transform: translateY(-8px) scale(1.08);
+}
+
+.project-card.featured .device-screen-mockup {
+  width: 175px;
 }
 
 .project-visual-badge {
   position: absolute;
-  top: 18px;
-  left: 18px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
+  top: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
   padding: 5px 12px;
   border-radius: var(--radius-full);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--ink-800);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: 5;
 }
 
 .project-info {
@@ -861,6 +972,46 @@ body {
   padding: 36px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.06);
+}
+
+/* Interactive Comparison Selector Tabs */
+.comparison-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+
+.comp-tab-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-700);
+  background: var(--bg-subtle);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.comp-tab-btn:hover {
+  color: var(--ink-900);
+  background: rgba(224, 119, 79, 0.08);
+  border-color: var(--coral);
+}
+
+.comp-tab-btn.active {
+  background: var(--coral);
+  color: #ffffff;
+  border-color: var(--coral);
+  box-shadow: 0 4px 12px var(--coral-glow);
 }
 
 .split-viewer-header {
@@ -1550,6 +1701,290 @@ body {
 
 .modal-content-body {
   padding: 48px;
+}
+
+/* Modal Screen Gallery */
+.modal-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+
+.modal-screen-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  background: #fdfaf6;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-screen-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  border-color: var(--coral);
+}
+
+.modal-screen-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal-screen-item .screen-label {
+  padding: 6px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-700);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Screen Lightbox Zoom Modal */
+.screen-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 18, 22, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  cursor: zoom-out;
+}
+
+.screen-zoom-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.screen-zoom-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen-zoom-img {
+  max-width: 100%;
+  max-height: 82vh;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.screen-zoom-caption {
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   Cute & Soft Figma Interactive Animations
+   ========================================================================== */
+
+/* Cute Figma Live Multiplayer Cursor Follower */
+.figma-live-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  transform: translate(0, 0);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.08s ease-out;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.figma-live-cursor.visible {
+  opacity: 1;
+}
+
+.figma-cursor-icon {
+  width: 18px;
+  height: 22px;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+  transform: rotate(-15deg);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.figma-live-cursor.clicking .figma-cursor-icon {
+  transform: rotate(-15deg) scale(0.85);
+}
+
+.figma-cursor-badge {
+  background: #0d99ff;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 9px 4px 7px;
+  border-radius: 4px 12px 12px 12px;
+  box-shadow: 0 4px 14px rgba(13, 153, 255, 0.38);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.01em;
+  animation: figmaBadgeBreathe 3s ease-in-out infinite;
+}
+
+.figma-cursor-badge .badge-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: figmaDotPulse 1.4s ease-in-out infinite;
+}
+
+/* Soft Figma Dimension Pill on Project Cards Hover */
+.project-card {
+  position: relative;
+}
+
+.figma-dimension-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  background: rgba(13, 153, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  opacity: 0;
+  transform: translateY(6px) scale(0.92);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(13, 153, 255, 0.3);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.project-card:hover .figma-dimension-tag {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Cute Floating Figma Comment Stickers */
+.figma-comment-sticker {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  background: #ffffff;
+  border: 1.5px solid #0d99ff;
+  border-radius: 12px 12px 12px 3px;
+  padding: 8px 14px;
+  box-shadow: 0 10px 28px -4px rgba(13, 153, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-900);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  animation: figmaStickerPop 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.figma-comment-sticker .author-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffe3d3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+/* Cute Reaction Confetti Burst */
+.figma-particle-reaction {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 20px;
+  animation: figmaParticleBurst 1.8s cubic-bezier(0.12, 0.8, 0.32, 1) forwards;
+  user-select: none;
+}
+
+@keyframes figmaBadgeBreathe {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes figmaDotPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes figmaStickerPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 12px) scale(0.85);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1.04);
+  }
+  25% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -4px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -24px) scale(0.9);
+  }
+}
+
+@keyframes figmaParticleBurst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.5) rotate(0deg);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(var(--dx), var(--dy)) scale(1.2) rotate(var(--rot));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--dx) * 1.4), calc(var(--dy) + 40px)) scale(0.8) rotate(calc(var(--rot) * 1.5));
+  }
 }
 
 /* ==========================================================================

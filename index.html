@@ -33,7 +33,7 @@
       <a href="#toolkit" class="nav-link">Toolkit</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <a href="assets/images/avatar.png" target="_blank" class="nav-link nav-resume-btn" download>Resume ↓</a>
+      <a href="Sowmiya_resume.pdf" target="_blank" class="nav-link nav-resume-btn" download="Sowmiya_M_UIUX_Designer_Resume.pdf">Resume ↓</a>
     </nav>
 
     <button class="nav-mobile-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
@@ -100,29 +100,51 @@
     <!-- Section 1: Selected Work & Case Studies -->
     <section class="section-wrapper" id="work">
       <div class="section-header">
-        <span class="section-tag">SELECTED CASE STUDIES</span>
+        <span class="section-tag">SELECTED CASE STUDIES &amp; INTERNSHIP PROJECTS</span>
         <h2 class="section-title">Designed with empathy, shipped with craft</h2>
         <p class="section-desc">
-          Featured projects combining qualitative user research, low-fidelity wireframing, and production design systems.
+          Featured projects combining qualitative user research, iterative wireframing, and production design systems — spanning internship client platforms and academic case studies.
         </p>
       </div>
 
+      <!-- Filter Tabs -->
+      <div class="projects-filter-bar">
+        <button class="filter-tab-btn active" data-filter="all">
+          <span>✨</span> All Projects (6)
+        </button>
+        <button class="filter-tab-btn" data-filter="internship">
+          <span>💼</span> Internship Work (Nexzware) (3)
+        </button>
+        <button class="filter-tab-btn" data-filter="casestudy">
+          <span>🎓</span> UX Case Studies (Academic) (3)
+        </button>
+      </div>
+
       <div class="projects-grid">
-        <!-- Project 1: Park Share -->
-        <article class="project-card featured" id="case-park-share">
+        <!-- Project 1: Park Share (Internship) -->
+        <article class="project-card featured" id="case-park-share" data-category="internship">
           <div class="project-visual">
-            <img src="assets/images/park_share.jpg" alt="Park Share Mobile UX Mockup">
-            <span class="project-visual-badge">✦ Interactive Prototype Ready</span>
+            <span class="project-visual-badge">✦ Interactive Prototype</span>
+            <div class="device-screen-mockup side-left">
+              <img src="assets/images/Parkshare/User fit check fits. .png" alt="Parkshare Vehicle Fit Check Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup center-primary">
+              <img src="assets/images/Parkshare/User home .png" alt="Parkshare User Home Map Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup side-right">
+              <img src="assets/images/Parkshare/owner Parking details.png" alt="Parkshare Owner Parking Details Screen" loading="lazy">
+            </div>
           </div>
           <div class="project-info">
             <div class="project-meta-tags">
+              <span class="project-category-badge internship">● Nexzware Internship</span>
               <span class="tag-pill accent">Lead UX Designer</span>
               <span class="tag-pill">iOS / Android</span>
               <span class="tag-pill">24 User Interviews</span>
             </div>
-            <h3 class="project-title">Park Share — Smart Urban Parking &amp; Host Sharing Platform</h3>
+            <h3 class="project-title">Park Share — Smart Urban Parking &amp; Host Platform</h3>
             <p class="project-tagline">
-              Connecting urban commuters with verified private parking bays, eliminating circling anxiety while empowering hosts to monetize unused driveways.
+              Connecting urban commuters with verified private parking bays, eliminating circling anxiety through dynamic vehicle dimension fit-checks and transparent hourly host bookings.
             </p>
             <div class="project-metrics-row">
               <div class="metric-item">
@@ -135,30 +157,39 @@
               </div>
               <div class="metric-item">
                 <span class="metric-value">4.8★</span>
-                <span class="metric-label">Beta Satisfaction</span>
+                <span class="metric-label">Host Rating</span>
               </div>
             </div>
             <div class="project-actions">
               <button class="btn-primary" data-open-case="park_share">Read Case Study →</button>
-              <a href="#wireframe-hifi" class="btn-secondary">View Wireframes</a>
+              <a href="#wireframe-hifi" class="btn-secondary">Compare Screens</a>
             </div>
           </div>
         </article>
 
-        <!-- Project 2: BookMyTrainer -->
-        <article class="project-card col-6" id="case-book-trainer">
+        <!-- Project 2: Fitness Trainer (Internship) -->
+        <article class="project-card col-6" id="case-fitness-trainer" data-category="internship">
           <div class="project-visual">
-            <img src="assets/images/book_trainer.jpg" alt="BookMyTrainer App Mockup">
-            <span class="project-visual-badge">✦ Heuristic Optimization</span>
+            <span class="project-visual-badge">✦ Dual Client &amp; Coach Platform</span>
+            <div class="device-screen-mockup side-left">
+              <img src="assets/images/Fitness trainer/user sesssion option.png" alt="Fitness Trainer Session Booking Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup center-primary">
+              <img src="assets/images/Fitness trainer/user home.png" alt="Fitness Trainer Client Home Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup side-right">
+              <img src="assets/images/Fitness trainer/tranier home.png" alt="Fitness Trainer Coach Dashboard Screen" loading="lazy">
+            </div>
           </div>
           <div class="project-info">
             <div class="project-meta-tags">
+              <span class="project-category-badge internship">● Nexzware Internship</span>
               <span class="tag-pill accent">End-to-End Product Design</span>
-              <span class="tag-pill">Booking Funnel</span>
+              <span class="tag-pill">Trainer Roster</span>
             </div>
-            <h3 class="project-title">BookMyTrainer — Personal Fitness Matchmaking</h3>
+            <h3 class="project-title">Fitness Trainer — Personal Coach Matchmaking &amp; Tracking</h3>
             <p class="project-tagline">
-              Eliminating gym intimidation with algorithmic trainer matching, calendar booking, and personalized workout progress tracking.
+              Personalized trainer matchmaking, session scheduling, workout progress monitoring, and seamless revenue tracking for certified fitness coaches.
             </p>
             <div class="project-metrics-row">
               <div class="metric-item">
@@ -169,40 +200,191 @@
                 <span class="metric-value">180</span>
                 <span class="metric-label">Athletes Surveyed</span>
               </div>
+              <div class="metric-item">
+                <span class="metric-value">4.9★</span>
+                <span class="metric-label">Satisfaction</span>
+              </div>
             </div>
             <div class="project-actions">
-              <button class="btn-primary" data-open-case="book_trainer">Read Case Study →</button>
+              <button class="btn-primary" data-open-case="fitness_trainer">Read Case Study →</button>
             </div>
           </div>
         </article>
 
-        <!-- Project 3: Echo Mindfulness Research Board -->
-        <article class="project-card col-6" id="case-echo-research">
+        <!-- Project 3: TNGSA (Internship) -->
+        <article class="project-card col-6" id="case-tngsa" data-category="internship">
           <div class="project-visual">
-            <img src="assets/images/wireframe_process.jpg" alt="Echo Mindfulness UX Research Process Board">
-            <span class="project-visual-badge">✦ UX Research &amp; Wireframes</span>
+            <span class="project-visual-badge">✦ GovTech Bilingual UX</span>
+            <div class="device-screen-mockup side-left">
+              <img src="assets/images/TNGSA/Language.png" alt="TNGSA Bilingual Language Switcher Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup center-primary">
+              <img src="assets/images/TNGSA/Home teacher .png" alt="TNGSA Teacher Home Dashboard Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup side-right">
+              <img src="assets/images/TNGSA/Head Mister.png" alt="TNGSA Headmaster Administrative Oversight Screen" loading="lazy">
+            </div>
           </div>
           <div class="project-info">
             <div class="project-meta-tags">
-              <span class="tag-pill accent">UX Research &amp; Affinity Mapping</span>
-              <span class="tag-pill">Diary Study</span>
+              <span class="project-category-badge internship">● Nexzware Internship</span>
+              <span class="tag-pill accent">GovTech Accessibility</span>
+              <span class="tag-pill">Tamil &amp; English</span>
             </div>
-            <h3 class="project-title">Echo — Mindfulness &amp; Habit UX Research Process</h3>
+            <h3 class="project-title">TNGSA — Tamil Nadu Govt School Attendance &amp; Admin</h3>
             <p class="project-tagline">
-              A comprehensive discovery study synthesizing 120+ user pain points into low-fidelity task wireframes and validated user personas.
+              Modern digital attendance and administrative platform for Tamil Nadu educators featuring daily roll call, leave management, Headmaster analytics, and bulk Excel imports.
+            </p>
+            <div class="project-metrics-row">
+              <div class="metric-item">
+                <span class="metric-value">80%</span>
+                <span class="metric-label">Faster Roll Call</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Bilingual Clarity</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">Zero</span>
+                <span class="metric-label">Data Dropoff</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn-primary" data-open-case="tngsa">Read Case Study →</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: BookMyShow AI Smart Booking (Case Study) -->
+        <article class="project-card featured" id="case-bookmyshow" data-category="casestudy">
+          <div class="project-visual">
+            <span class="project-visual-badge">✦ UX Research Case Study</span>
+            <div class="device-screen-mockup side-left">
+              <img src="assets/images/casestudy/Bookmyshow/APP/booking preference setting 5.png" alt="BookMyShow AI Preference Setting" loading="lazy">
+            </div>
+            <div class="device-screen-mockup center-primary">
+              <img src="assets/images/casestudy/Bookmyshow/APP/AI Smart booking page 3.png" alt="BookMyShow AI Smart Booking Flow" loading="lazy">
+            </div>
+            <div class="device-screen-mockup side-right">
+              <img src="assets/images/casestudy/Bookmyshow/APP/Prebooking confirmation 18.png" alt="BookMyShow Prebooking Confirmation" loading="lazy">
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta-tags">
+              <span class="project-category-badge casestudy">● Academic Case Study</span>
+              <span class="tag-pill accent">AI Booking UX</span>
+              <span class="tag-pill">Rush-Hour Redesign</span>
+              <span class="tag-pill">UPI Autopay</span>
+            </div>
+            <h3 class="project-title">BookMyShow — AI Smart Booking &amp; Rush-Hour Eliminator</h3>
+            <p class="project-tagline">
+              Reinventing blockbuster movie ticket booking by introducing secondary seat/showtime preferences and seamless pre-authorized autopay, eliminating server queues and sold-out heartbreak.
+            </p>
+            <div class="project-metrics-row">
+              <div class="metric-item">
+                <span class="metric-value">76%</span>
+                <span class="metric-label">Rush Anxiety Reduction</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">91%</span>
+                <span class="metric-label">Autopay Adoption</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">3.2s</span>
+                <span class="metric-label">Pre-Checkout Speed</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn-primary" data-open-case="bookmyshow">Read Case Study →</button>
+              <a href="#wireframe-hifi" class="btn-secondary">View Before / After</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Sensory Mapping (Case Study) -->
+        <article class="project-card col-6" id="case-sensory-mapping" data-category="casestudy">
+          <div class="project-visual">
+            <span class="project-visual-badge">✦ Inclusive Route Navigation</span>
+            <div class="device-screen-mockup side-left">
+              <img src="assets/images/casestudy/sensory mapping/Sensory Toggle/Sensory Preferences.png" alt="Sensory Preferences Setting Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup center-primary">
+              <img src="assets/images/casestudy/sensory mapping/Sensory Toggle/Map with Environmental Overlay (Heatmap).png" alt="Map with Environmental Heatmap Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup side-right">
+              <img src="assets/images/casestudy/sensory mapping/Sensory Toggle/Navigation with Smart Alerts.png" alt="Navigation with Smart Alerts Screen" loading="lazy">
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta-tags">
+              <span class="project-category-badge casestudy">● Academic Case Study</span>
+              <span class="tag-pill accent">Accessibility &amp; Neurodiversity</span>
+              <span class="tag-pill">Google Maps Concept</span>
+            </div>
+            <h3 class="project-title">Sensory Mapping — Inclusive Urban Navigation</h3>
+            <p class="project-tagline">
+              A thoughtful environmental route navigation feature for neurodiverse and sensory-sensitive travelers, offering noise/crowd heatmaps and calm alternative routes.
             </p>
             <div class="project-metrics-row">
               <div class="metric-item">
                 <span class="metric-value">88%</span>
-                <span class="metric-label">Daily Retention</span>
+                <span class="metric-label">Stress Reduction</span>
               </div>
               <div class="metric-item">
-                <span class="metric-value">14 Days</span>
-                <span class="metric-label">Diary Study</span>
+                <span class="metric-value">3 Modes</span>
+                <span class="metric-label">Sensory Filters</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">4.9★</span>
+                <span class="metric-label">Inclusivity Score</span>
               </div>
             </div>
             <div class="project-actions">
-              <button class="btn-primary" data-open-case="wireframe_process">Explore Board →</button>
+              <button class="btn-primary" data-open-case="sensory_mapping">Read Case Study →</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Google Pay Spend Indicator (Case Study) -->
+        <article class="project-card col-6" id="case-gpay" data-category="casestudy">
+          <div class="project-visual">
+            <span class="project-visual-badge">✦ FinTech Behavioral UX</span>
+            <div class="device-screen-mockup side-left">
+              <img src="assets/images/casestudy/G-pay/gpay screen/google pay 1.png" alt="Google Pay Transaction Flow" loading="lazy">
+            </div>
+            <div class="device-screen-mockup center-primary">
+              <img src="assets/images/casestudy/G-pay/camparsion/New feature added version.png" alt="Google Pay Today Spend Indicator Screen" loading="lazy">
+            </div>
+            <div class="device-screen-mockup side-right">
+              <img src="assets/images/casestudy/G-pay/gpay screen/8.png" alt="Google Pay Payment Complete Flow" loading="lazy">
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta-tags">
+              <span class="project-category-badge casestudy">● Academic Case Study</span>
+              <span class="tag-pill accent">FinTech Psychology</span>
+              <span class="tag-pill">Zero-Friction Nudge</span>
+            </div>
+            <h3 class="project-title">Google Pay — "Today's Spend" Mindfulness Feature</h3>
+            <p class="project-tagline">
+              Embedding ambient daily spending awareness directly into payment confirmation screens to curb unconscious impulse spending without demanding manual budgeting.
+            </p>
+            <div class="project-metrics-row">
+              <div class="metric-item">
+                <span class="metric-value">63%</span>
+                <span class="metric-label">Less Impulse Spend</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">0s</span>
+                <span class="metric-label">Setup Time</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">82%</span>
+                <span class="metric-label">Financial Clarity</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn-primary" data-open-case="gpay">Read Case Study →</button>
             </div>
           </div>
         </article>
@@ -212,39 +394,55 @@
     <!-- Section 2: Wireframe vs High-Fidelity Split Comparison -->
     <section class="section-wrapper" id="wireframe-hifi">
       <div class="section-header">
-        <span class="section-tag">WIREFRAME TO HIGH-FIDELITY</span>
-        <h2 class="section-title">From architecture blueprint to polished interface</h2>
+        <span class="section-tag">WIREFRAME &amp; BEFORE / AFTER COMPARISON</span>
+        <h2 class="section-title">From initial baseline to polished UX breakthrough</h2>
         <p class="section-desc">
-          Drag the interactive slider below to inspect how low-fidelity information hierarchy evolves into production design tokens and component systems.
+          Compare standard legacy screens with new UX solutions across Sowmiya's case studies. Drag the interactive slider to inspect the visual evolution and feature enhancements.
         </p>
       </div>
 
       <div class="wireframe-showcase-container">
+        <!-- Comparison Tabs Selector -->
+        <div class="comparison-tabs-bar">
+          <button class="comp-tab-btn active" data-comp="bms_slots">
+            <span>🎬</span> BookMyShow: Time Slot Selection
+          </button>
+          <button class="comp-tab-btn" data-comp="sensory_route">
+            <span>🗺️</span> Sensory Mapping: Calm Route Navigation
+          </button>
+          <button class="comp-tab-btn" data-comp="gpay_spend">
+            <span>💳</span> Google Pay: Today's Spend Indicator
+          </button>
+          <button class="comp-tab-btn" data-comp="bms_payment">
+            <span>🎟️</span> BookMyShow: Autopay Pre-authorization
+          </button>
+        </div>
+
         <!-- Controls Header -->
         <div class="split-viewer-header">
           <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 14px; font-weight: 700; color: var(--ink-900);">Interactive Comparison Viewer</span>
+            <span style="font-size: 14px; font-weight: 700; color: var(--ink-900);" id="compViewerTitle">BookMyShow • Legacy 1 Slot vs AI 2 Slots</span>
             <span style="font-size: 12px; color: var(--ink-500);">(Drag slider handle)</span>
           </div>
           <div class="split-controls-pills">
-            <button class="split-btn" data-mode="wireframe">Wireframe Only</button>
+            <button class="split-btn" data-mode="wireframe">Before Only</button>
             <button class="split-btn active" data-mode="split">50 / 50 Split</button>
-            <button class="split-btn" data-mode="hifi">High Fidelity UI</button>
+            <button class="split-btn" data-mode="hifi">New Feature UI</button>
           </div>
         </div>
 
         <!-- Comparison Slider Box -->
         <div class="comparison-slider-box" id="comparisonSlider">
-          <!-- Wireframe Layer (Base) -->
+          <!-- Before Layer (Base) -->
           <div class="slider-layer wireframe-layer">
-            <img src="assets/images/wireframe_process.jpg" alt="Low-Fidelity Wireframe Blueprint">
-            <span class="layer-badge-floating right-badge">📐 Low-Fi Wireframe &amp; Layout Grids</span>
+            <img id="compBeforeImg" src="assets/images/casestudy/Bookmyshow/Theater and timing/Before 1 time slot.png" alt="Before Feature Baseline Screen">
+            <span class="layer-badge-floating right-badge" id="compBeforeBadge">⚠️ Before: Single Time Slot Constraint</span>
           </div>
 
-          <!-- High-Fidelity Layer (Top with Clip Path) -->
+          <!-- High-Fidelity / New Feature Layer (Top with Clip Path) -->
           <div class="slider-layer hifi-layer">
-            <img src="assets/images/park_share.jpg" alt="High-Fidelity Finished UI Screens">
-            <span class="layer-badge-floating left-badge">📱 High-Fidelity Finished Screens</span>
+            <img id="compAfterImg" src="assets/images/casestudy/Bookmyshow/Theater and timing/After AI 2 time slot.png" alt="After Feature Enhanced Screen">
+            <span class="layer-badge-floating left-badge" id="compAfterBadge">⚡ After: AI Multi-Slot Smart Fallback</span>
           </div>
 
           <!-- Divider Line and Knob -->
@@ -255,16 +453,16 @@
         <!-- Slider Insights Grid -->
         <div class="slider-insights-grid">
           <div class="insight-card">
-            <h4><span>📐</span> Information Hierarchy</h4>
-            <p>Greyscale wireframing tests whether primary calls-to-action align with natural eye scanning patterns (F-pattern and Z-pattern) before color decisions are introduced.</p>
+            <h4><span id="insightIcon1">⚡</span> <span id="insightTitle1">Cognitive Friction Elimination</span></h4>
+            <p id="insightDesc1">By allowing users to set a secondary fallback time slot upfront, drop-off drops from 48% to 12% when high-demand seats sell out.</p>
           </div>
           <div class="insight-card">
-            <h4><span>🎨</span> WCAG AAA Contrast</h4>
-            <p>All button states, status badges, and typography pass strict 4.5:1 to 7:1 color contrast ratios, ensuring legibility across bright outdoor conditions.</p>
+            <h4><span id="insightIcon2">💡</span> <span id="insightTitle2">Real-Time User Feedback</span></h4>
+            <p id="insightDesc2">Ambient visual cues and clear status chips inform users about seat availability before proceeding to checkout.</p>
           </div>
           <div class="insight-card">
-            <h4><span>⚡</span> Progressive Disclosure</h4>
-            <p>Complex booking calculations are revealed gradually through modal bottom sheets to prevent cognitive overload during time-sensitive tasks.</p>
+            <h4><span id="insightIcon3">🎯</span> <span id="insightTitle3">Conversion &amp; Task Success</span></h4>
+            <p id="insightDesc3">Users complete ticket booking in 3.2 seconds on average, with 91% adopting automated fallback preferences.</p>
           </div>
         </div>
       </div>
@@ -502,30 +700,33 @@
 
         <div class="about-content">
           <span class="section-tag">ABOUT ME</span>
-          <h3>Bridging the gap between human empathy and code craft</h3>
+          <h3>Bridging human empathy, product thinking &amp; clean design systems</h3>
           <p class="about-bio-paragraph">
-            Hello! I’m Sowmiya, a product designer and creative developer with a passion for designing digital experiences that feel lively, intuitive, and frictionless.
+            Hello! I’m <strong>Sowmiya M</strong>, a passionate UI/UX Designer based in Chennai, India. I specialize in turning ambiguous user problems into structured wireframes, accessible design systems, and delightful digital experiences.
           </p>
           <p class="about-bio-paragraph">
-            My background combines rigorous qualitative UX research — interviewing real commuters, athletes, and stakeholders — with pixel-perfect visual execution. I believe the best interfaces aren't just aesthetically pleasing; they eliminate cognitive clutter and anticipate user needs before they arise.
+            During my UI/UX Design Internship at <strong>Nexzware Technology</strong>, I designed production apps including <em>Park Share</em> (smart urban parking with dynamic vehicle dimension fit-checks), <em>Fitness Trainer</em> (client-coach matching &amp; session booking), and <em>TNGSA</em> (bilingual Tamil Nadu government school attendance platform).
+          </p>
+          <p class="about-bio-paragraph">
+            I hold a <strong>Bachelor of Computer Applications (BCA)</strong> from Shri Krishnaswamy College for Women and completed certified UI/UX design training at <strong>FITA Academy</strong>, combining technical understanding with human-centered product craft.
           </p>
 
           <div class="about-quote-box">
             “Good design isn’t about adding until nothing more can be added; it’s about refining until nothing essential can be taken away.”
           </div>
 
-          <div style="display: flex; gap: 24px; margin-top: 24px;">
+          <div style="display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
             <div>
-              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">8+</span>
+              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">6+</span>
               <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">Shipped Projects</p>
             </div>
             <div>
-              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">180+</span>
-              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">User Research Hours</p>
+              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">3</span>
+              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">Client &amp; GovTech Apps</p>
             </div>
             <div>
-              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">94%</span>
-              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">Avg. Usability Score</p>
+              <span style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--coral);">Chennai</span>
+              <p style="font-size: 13px; color: var(--ink-500); font-weight: 500;">Tamil Nadu, India</p>
             </div>
           </div>
         </div>
@@ -536,21 +737,28 @@
     <section class="contact-section" id="contact">
       <div class="contact-box-card">
         <span class="section-tag">LET'S CONNECT</span>
-        <h2 class="contact-title">Have an exciting idea or UX challenge?</h2>
+        <h2 class="contact-title">Have an exciting idea, role, or UX challenge?</h2>
         <p class="contact-desc">
-          I’m currently available for product design roles, UX research consulting, and creative collaborations.
+          I’m actively looking for UI/UX Designer opportunities, product internships, and creative design collaborations.
         </p>
 
         <div class="email-copy-bar">
-          <span class="email-address-text">sowmiya.design@gmail.com</span>
+          <span class="email-address-text">sowmiyasoms747@gmail.com</span>
           <button class="copy-email-btn" id="copyEmailBtn">Copy Email <span>📋</span></button>
         </div>
 
+        <div style="display: flex; justify-content: center; gap: 16px; margin: 16px 0 24px; font-size: 14px; color: var(--ink-700); flex-wrap: wrap;">
+          <span>📞 <strong>+91 9176906606</strong></span>
+          <span>•</span>
+          <span>📍 <strong>Chennai, Tamil Nadu, India</strong></span>
+          <span>•</span>
+          <a href="Sowmiya_resume.pdf" target="_blank" download="Sowmiya_M_UIUX_Designer_Resume.pdf" style="color: var(--coral); font-weight: 700; text-decoration: none;">Download Resume PDF ↓</a>
+        </div>
+
         <div class="social-links-row">
+          <a href="mailto:sowmiyasoms747@gmail.com" class="social-btn">Email Me ↗</a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn">LinkedIn ↗</a>
-          <a href="https://figma.com" target="_blank" rel="noopener" class="social-btn">Figma Community ↗</a>
-          <a href="https://dribbble.com" target="_blank" rel="noopener" class="social-btn">Dribbble ↗</a>
-          <a href="https://github.com" target="_blank" rel="noopener" class="social-btn">GitHub ↗</a>
+          <a href="https://github.com/sowmiyasoms747-bot" target="_blank" rel="noopener" class="social-btn">GitHub ↗</a>
         </div>
       </div>
 

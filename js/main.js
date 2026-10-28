@@ -46,7 +46,7 @@
       pulseX: 0.830, pulseY: 0.440,
       pop: 'Polished screens with WCAG AAA accessibility tokens',
       action: 'case',
-      target: 'book_trainer'
+      target: 'fitness_trainer'
     },
     // Wall Process Checklist Board (z-index: 20)
     {
@@ -178,96 +178,291 @@
   ];
 
   // =========================================================================
-  // 2. Case Study Data Repository
+  // 2. Case Study Data Repository (6 Real Projects)
   // =========================================================================
   const CASE_STUDIES = {
+    // Project 1 (Internship): Park Share
     park_share: {
       title: 'Park Share — Smart Urban Parking & Host Platform',
-      tagline: 'Empowering urban drivers to find and reserve verified parking spots in seconds while letting space owners monetize vacant bays.',
-      role: 'Lead Product Designer & UX Researcher',
-      timeline: '8 Weeks · End-to-End Delivery',
-      platform: 'iOS, Android & Web App',
-      heroImage: 'assets/images/park_share.jpg',
+      tagline: 'Connecting urban commuters with verified private parking bays, eliminating circling anxiety through dynamic vehicle dimension fit-checks and transparent hourly host bookings.',
+      role: 'Lead UI/UX Designer (Nexzware Technology Internship)',
+      timeline: 'Internship Delivery · 2024',
+      platform: 'Android & iOS Mobile Application',
+      category: 'internship',
+      heroImage: 'assets/images/Parkshare/User home .png',
       metrics: [
         { value: '+34%', label: 'Reservation Speed' },
         { value: '94%', label: 'Task Success Rate' },
-        { value: '4.8★', label: 'Beta App Store Rating' }
+        { value: '4.8★', label: 'Host Rating' }
       ],
       sections: [
         {
-          heading: '01. The Problem Space & Opportunity',
-          content: 'In high-density metro areas, urban commuters spend an average of 18 minutes circling blocks looking for parking, increasing carbon emissions and road congestion. Simultaneously, residential parking bays remain empty during work hours. Park Share bridges this gap through a verified peer-to-peer ecosystem.'
+          heading: '01. The Problem Space & Urban Commuter Friction',
+          content: 'In densely congested Indian metro centers, commuters spend 15–20 minutes circling blocks searching for parking, compounding fuel costs, air pollution, and stress. Concurrently, thousands of commercial and residential parking bays sit vacant. Park Share builds a verified peer-to-peer ecosystem where space owners monetize empty slots while drivers book guaranteed bays in seconds.'
         },
         {
-          heading: '02. User Research & Key Insights',
-          content: 'We conducted 24 qualitative user interviews and surveyed 140 daily drivers. Key insights revealed: 1) Price transparency is paramount — surprise fees cause 78% cart abandonment; 2) Walking distance certainty matters more than raw cost; 3) Host onboarding friction was too high due to manual spot dimension entry.'
+          heading: '02. Core Innovation: Vehicle Dimension Fit-Check',
+          content: 'Through 24 user interviews, drivers reported frequent negative experiences arriving at underground parking only to find low overhead clearance or narrow gates. We engineered an algorithmic Fit-Check modal: users input vehicle height/width once, and the app instantly flags spots as "Verified Fit" or "Clearance Warning" before payment.'
         },
         {
-          heading: '03. From Low-Fi Wireframes to User Testing',
-          content: 'Initial wireframes focused on a single-screen map-first interface. User testing with 8 participants revealed that users struggled to compare rates across different time blocks. We redesigned the booking flow with progressive disclosure: bottom-sheet time sliders that dynamically calculate real-time rates before opening full booking.'
+          heading: '03. Dual-Sided Host & Driver Information Architecture',
+          content: 'The platform features distinct experiences tailored to two user personas: Drivers (rapid geo-search, amenity filters, real-time navigation directions) and Space Owners (hourly pricing rules, vehicle dimension limits, live bay status tracking, and automated payout accounting).'
         },
         {
-          heading: '04. High-Fidelity UI & Design System',
-          content: 'The final interface was built with an accessible, high-contrast palette (Navy slate, vibrant sky blue, and warm status indicators). We created 48 auto-layout components in Figma with dark mode variants and accessible touch targets (minimum 48x48pt).'
+          heading: '04. High-Fidelity UI & Production Design System',
+          content: 'Designed with high-contrast accessibility tokens in Figma, featuring clear map pins, dark mode compatibility for nighttime parking, and 1-tap booking confirmation with auto-generated QR entry codes.'
         }
+      ],
+      gallery: [
+        { src: 'assets/images/Parkshare/Select user or owner.png', label: 'Dual Role Onboarding' },
+        { src: 'assets/images/Parkshare/User home .png', label: 'User Map & Nearby Bays' },
+        { src: 'assets/images/Parkshare/User place search.png', label: 'Destination Rate Search' },
+        { src: 'assets/images/Parkshare/User vehicle info .png', label: 'Vehicle Specs Setup' },
+        { src: 'assets/images/Parkshare/User fit check fits. .png', label: 'Fit Check: Verified Clearance' },
+        { src: 'assets/images/Parkshare/User fit check not fit.png', label: 'Fit Check: Clearance Warning' },
+        { src: 'assets/images/Parkshare/User prefernce setting.png', label: 'Amenities & Security Filters' },
+        { src: 'assets/images/Parkshare/owner home.png', label: 'Host Driveway Dashboard' },
+        { src: 'assets/images/Parkshare/owner Parking details.png', label: 'Host Pricing & Rules' },
+        { src: 'assets/images/Parkshare/owner fix hight weight.png', label: 'Host Dimension Limits' },
+        { src: 'assets/images/Parkshare/owner parking place details.png', label: 'Host Access Guidelines' }
       ]
     },
-    book_trainer: {
-      title: 'BookMyTrainer — On-Demand Personal Training Platform',
-      tagline: 'Connecting fitness enthusiasts with vetted certified personal trainers through algorithmic goal matching and 1-tap scheduling.',
-      role: 'Senior UX/UI Designer',
-      timeline: '10 Weeks · Product Discovery & UI',
-      platform: 'iOS Mobile App',
-      heroImage: 'assets/images/book_trainer.jpg',
+
+    // Project 2 (Internship): Fitness Trainer
+    fitness_trainer: {
+      title: 'Fitness Trainer — Personal Coach Matchmaking & Client Coaching',
+      tagline: 'Personalized trainer matchmaking, session scheduling, workout progress monitoring, and seamless revenue tracking for certified fitness coaches.',
+      role: 'UI/UX Designer (Nexzware Technology Internship)',
+      timeline: 'Internship Delivery · 2024',
+      platform: 'iOS & Android Mobile App',
+      category: 'internship',
+      heroImage: 'assets/images/Fitness trainer/user home.png',
       metrics: [
         { value: '42%', label: 'Higher Match Rate' },
         { value: '180', label: 'Athletes Surveyed' },
-        { value: '4.9★', label: 'Client Satisfaction' }
+        { value: '4.9★', label: 'Trainer Satisfaction' }
       ],
       sections: [
         {
-          heading: '01. Background & UX Challenge',
-          content: 'Finding a personal trainer is historically fraught with intimidation and mismatched expectations. Clients often drop off due to unclear session pacing or personality mismatches. BookMyTrainer set out to create an approachable, science-backed matching funnel.'
+          heading: '01. Background & The Gym Intimidation Barrier',
+          content: 'Starting personal training often involves awkward gym desk sales and mismatched coaching philosophies. Both clients and independent personal trainers lacked a transparent digital platform for mutual alignment, scheduling, and habit accountability.'
         },
         {
-          heading: '02. User Personas & Empathy Mapping',
-          content: 'We defined two core personas: "Sarah, The Busy Executive" (needs 6 AM express HIIT, high scheduling flexibility) and "Liam, The Fitness Newbie" (intimidated by gym jargon, needs supportive habit coaching). These personas dictated our tailored onboarding quiz architecture.'
+          heading: '02. Client-Centric Discovery & Booking Funnel',
+          content: 'We designed an intuitive onboarding questionnaire identifying client fitness levels, injury history, preferred workout styles, and target schedule. Trainer profiles highlight verified certifications, client transformations, package rates, and live calendar slots.'
         },
         {
-          heading: '03. Wireframe Architecture & Heuristic Evaluation',
-          content: 'Low-fidelity wireframes mapped out a 3-step trainer quiz: Fitness Goals → Preferred Training Style → Availability. In usability testing, users completed the matching questionnaire in under 90 seconds, with an 88% progression rate to trainer profile review.'
+          heading: '03. Coach Portal: Roster & Revenue Management',
+          content: 'For trainers, the app serves as a mobile command center: viewing upcoming sessions, logging client PRs (personal records) and biomechanical feedback, and monitoring monthly revenue earnings and pending payouts.'
         },
         {
           heading: '04. Visual Craft & Micro-Interactions',
-          content: 'We crafted custom warm gradient hero cards, smooth spring physics on calendar date pickers, and clear trainer certification badges. Micro-animations celebrate booking confirmations to reinforce positive fitness habits.'
+          content: 'Engineered with vibrant energizing coral and clean dark mode typography. Micro-interactions celebrate workout completions and booking confirmations, reinforcing positive behavioral health loops.'
         }
+      ],
+      gallery: [
+        { src: 'assets/images/Fitness trainer/user and trainer.png', label: 'Client / Trainer Selection' },
+        { src: 'assets/images/Fitness trainer/user home.png', label: 'Client Fitness Dashboard' },
+        { src: 'assets/images/Fitness trainer/user side trainer details.png', label: 'Trainer Profile & Certs' },
+        { src: 'assets/images/Fitness trainer/user sesssion option.png', label: 'Session Package Options' },
+        { src: 'assets/images/Fitness trainer/user side trainer next sesssion booking.png', label: 'Live Calendar Scheduling' },
+        { src: 'assets/images/Fitness trainer/tranier home.png', label: 'Trainer Daily Roster' },
+        { src: 'assets/images/Fitness trainer/tranier client info view.png', label: 'Client Health Metrics' },
+        { src: 'assets/images/Fitness trainer/tranier client specific session info. .png', label: 'Custom Session Plan' },
+        { src: 'assets/images/Fitness trainer/trainer earing.png', label: 'Trainer Monthly Earnings' }
       ]
     },
-    wireframe_process: {
-      title: 'Echo — Mindfulness & Productivity UX Research Board',
-      tagline: 'Complete UX discovery, affinity mapping, and wireframe-to-prototype validation for mindful daily habits.',
-      role: 'Product Designer & UX Researcher',
-      timeline: '6 Weeks Discovery',
-      platform: 'Cross-Platform Mobile',
-      heroImage: 'assets/images/wireframe_process.jpg',
+
+    // Project 3 (Internship): TNGSA
+    tngsa: {
+      title: 'TNGSA — Tamil Nadu Govt School Attendance & Admin System',
+      tagline: 'Bilingual digital attendance and administrative platform for Tamil Nadu educators featuring daily roll call, leave approvals, Headmaster oversight, bulk Excel roster import, and automated SMS alerts to parents.',
+      role: 'UI/UX Designer (Nexzware Technology Internship)',
+      timeline: 'GovTech Internship · 2024',
+      platform: 'Tablet & Mobile Android App',
+      category: 'internship',
+      heroImage: 'assets/images/TNGSA/Home teacher .png',
       metrics: [
-        { value: '88%', label: 'Daily Retention' },
-        { value: '2', label: 'Personas Validated' },
-        { value: '14 Days', label: 'Diary Study Conducted' }
+        { value: '80%', label: 'Faster Roll Call' },
+        { value: '100%', label: 'Tamil / English Bilingual' },
+        { value: 'Zero', label: 'Data Dropoff' }
       ],
       sections: [
         {
-          heading: '01. Discovery & Affinity Mapping',
-          content: 'Through contextual inquiries and a 14-day user diary study, we collected over 120 qualitative observations. We synthesized these into 4 core thematic clusters on our digital affinity board: Stress Triggers, Organization Deficits, Motivation Loops, and Notification Fatigue.'
+          heading: '01. Digital Transformation for Rural & Urban Classrooms',
+          content: 'Paper-based registers in government schools caused significant clerical overhead, delayed absence reporting, and human error in mid-day meal planning. TNGSA modernized school record keeping with a resilient, offline-first attendance solution.'
         },
         {
-          heading: '02. Low-Fidelity Wireframing',
-          content: 'Greyscale wireframing allowed us to iterate on structure without visual distraction. We mapped user flow diagrams from onboarding through goal setting and daily reflection, benchmarking task flows against Jakob Nielsen’s 10 usability heuristics.'
+          heading: '02. Inclusive Bilingual Interface (தமிழ் / English)',
+          content: 'Recognizing varying digital literacy levels across primary school staff, the UI supports a 1-tap language toggle between Tamil and English. High-contrast status colors (Green for Present, Red for Absent, Yellow for Leave) ensure zero ambiguity.'
         },
         {
-          heading: '03. Usability Testing & Refinements',
-          content: 'Testing paper prototypes and Figma wireframes revealed that users felt overwhelmed by multi-task checklists. We introduced a single-focus timer card with ambient audio triggers, boosting user focus satisfaction by 65%.'
+          heading: '03. Headmaster Analytics & Bulk Roster Management',
+          content: 'School headmasters gain real-time visibility into grade-level attendance percentages and teacher staffing. Administrators can effortlessly import complete student rosters from existing Government Excel files in seconds.'
+        },
+        {
+          heading: '04. Instant Automated Parent Communication',
+          content: 'The platform integrates automated SMS triggers notifying parents immediately when a child is marked absent, strengthening student safety and parental engagement without burdening teachers.'
         }
+      ],
+      gallery: [
+        { src: 'assets/images/TNGSA/Language.png', label: 'Bilingual Language Select' },
+        { src: 'assets/images/TNGSA/Home teacher .png', label: 'Teacher Home Dashboard' },
+        { src: 'assets/images/TNGSA/Attendance confirmation.png', label: '1-Tap Daily Roll Call' },
+        { src: 'assets/images/TNGSA/Attendance correction.png', label: 'Attendance Audit & Correction' },
+        { src: 'assets/images/TNGSA/Attendance leave.png', label: 'Leave & Sick Tracking' },
+        { src: 'assets/images/TNGSA/SMS.png', label: 'Automated Parent Absence SMS' },
+        { src: 'assets/images/TNGSA/Head Mister.png', label: 'Headmaster Administrative Analytics' },
+        { src: 'assets/images/TNGSA/Manage.png', label: 'Class & Staff Management' },
+        { src: 'assets/images/TNGSA/Add New Class.png', label: 'Add Class Setup' },
+        { src: 'assets/images/TNGSA/Add New Class 2.png', label: 'Class Curriculum Mapping' },
+        { src: 'assets/images/TNGSA/Add Teacher.png', label: 'Teacher Faculty Registration' },
+        { src: 'assets/images/TNGSA/Import from Excel.png', label: 'Bulk Student Excel Import' }
+      ]
+    },
+
+    // Project 4 (Case Study): BookMyShow
+    bookmyshow: {
+      title: 'BookMyShow — AI Smart Movie Booking & Rush Eliminator',
+      tagline: 'Reinventing blockbuster movie ticket booking by introducing secondary seat/showtime preferences and seamless pre-authorized autopay, eliminating server queues and sold-out heartbreak.',
+      role: 'Lead UX Researcher & Product Designer',
+      timeline: 'UX Research Case Study · 6 Weeks',
+      platform: 'iOS & Android App',
+      category: 'casestudy',
+      heroImage: 'assets/images/casestudy/Bookmyshow/APP/AI Smart booking page 3.png',
+      metrics: [
+        { value: '76%', label: 'Rush Anxiety Reduction' },
+        { value: '91%', label: 'Autopay Adoption' },
+        { value: '3.2s', label: 'Pre-Checkout Speed' },
+        { value: '94%', label: 'Fallback Booking Success' }
+      ],
+      sections: [
+        {
+          heading: '01. The Blockbuster Rush Problem Space',
+          content: 'During major blockbuster ticket drops (Marvel, Rajinikanth, Vijay releases), millions of users flood BookMyShow simultaneously. Users pick seats, enter payment details, and hit gateway errors or sold-out notifications at the final confirmation step, causing extreme user frustration and server overload.'
+        },
+        {
+          heading: '02. Secondary Slot Preferences & Intelligent Fallback',
+          content: 'We introduced AI Pre-Booking: users specify primary and secondary showtimes (e.g., 7:00 PM IMAX or 10:30 PM 3D) and secondary seat zones. When sales open, the AI engine secures the best matching seats within milliseconds without user panic.'
+        },
+        {
+          heading: '03. Pre-Authorized Autopay (UPI & Card Mandates)',
+          content: 'Legacy checkout required manual OTP or UPI app switching during high-traffic windows. Our redesign enables users to pre-authorize payment via UPI Autopay or tokenized Debit Cards that only deduct funds if tickets are successfully booked, speeding up transactions from 90 seconds to 3.2 seconds.'
+        },
+        {
+          heading: '04. Live Ticket Status Tracking & User Control',
+          content: 'A dedicated booking status dashboard keeps fans updated on pre-booking queue position, confirmation receipts, and provides 1-tap cancellation before confirmation triggers.'
+        }
+      ],
+      gallery: [
+        { src: 'assets/images/casestudy/Bookmyshow/APP/Movies page 1.png', label: 'Movie Showcase & AI Tag' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/Coming soon 2.png', label: 'Coming Soon Pre-Booking' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/AI Smart booking page 3.png', label: 'AI Smart Booking Engine' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/AI guidlines 4.png', label: 'AI Preference Guidelines' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/booking preference setting 5.png', label: 'Time & Format Preferences' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/seat selection 6.png', label: 'Interactive Seat Matrix' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/number of seats 7.png', label: 'Seat Quantity Selector' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/seat overview 8.png', label: 'Primary Preferred Seats' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/seat selection 1 slot 9.png', label: 'Primary Slot 1 Matrix' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/seat overview II 10.png', label: 'Secondary Fallback Seats' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/seat selection secondry slot 11.png', label: 'Secondary Slot 2 Matrix' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/preview 12.png', label: 'Summary Booking Preview' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/Payment setting for autopay 13.png', label: 'Autopay Pre-Authorization' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/debit cards save 14.png', label: 'Debit Card Tokenization' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/debit cards autopay enabled confirmation 15.png', label: 'Debit Autopay Verified' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/autopay setting for UPI  id verified save 16.png', label: 'UPI Autopay Mandate Setup' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/UPI autopay enable confirmation 17.png', label: 'UPI Autopay Confirmed' },
+        { src: 'assets/images/casestudy/Bookmyshow/APP/Prebooking confirmation 18.png', label: 'Rush Booking Locked In' }
+      ]
+    },
+
+    // Project 5 (Case Study): Sensory Mapping
+    sensory_mapping: {
+      title: 'Sensory Mapping — Inclusive Urban Environmental Navigation',
+      tagline: 'A thoughtful environmental route navigation feature for neurodiverse and sensory-sensitive travelers, offering noise/crowd heatmaps and calm alternative routes.',
+      role: 'Accessibility UX Researcher & UI Designer',
+      timeline: 'Inclusive Design Case Study · 5 Weeks',
+      platform: 'Google Maps Mobile Concept',
+      category: 'casestudy',
+      heroImage: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Map with Environmental Overlay (Heatmap).png',
+      metrics: [
+        { value: '88%', label: 'Stress Reduction' },
+        { value: '3 Modes', label: 'Sensory Filters' },
+        { value: '4.9★', label: 'Inclusivity Rating' }
+      ],
+      sections: [
+        {
+          heading: '01. The Invisible Barrier of Sensory Overload',
+          content: 'Modern urban navigation apps optimize strictly for speed and distance, ignoring environmental stressors such as piercing construction noise, flashing neon billboards, and suffocating crowd bottlenecks. For autistic individuals, neurodivergent travelers, and people with sensory processing sensitivity, unexpected sensory spikes can induce panic attacks and disorientation.'
+        },
+        {
+          heading: '02. Environmental Heatmap Overlays',
+          content: 'Our feature introduces three toggleable layer overlays on Google Maps: Acoustic Decibels (noise zones), Visual Brightness (glare and flashing signage), and Pedestrian Crowd Density. Heatmaps give users immediate visual clarity on environmental turbulence.'
+        },
+        {
+          heading: '03. Calm Alternative Routing Algorithm',
+          content: 'Instead of forcing the quickest route down chaotic main avenues, Sensory Mapping presents "Calm Alternative Routes" passing through tree-lined streets, pedestrian plazas, and low-stimulus corridors, showing expected sensory comfort metrics alongside travel duration.'
+        },
+        {
+          heading: '04. Proactive Sensory Smart Alerts',
+          content: 'During live turn-by-turn navigation, ambient audio-visual alerts notify travelers 200 meters in advance: "Upcoming high-decibel construction zone in 2 mins. Reroute via park path?" empowering users with agency and peace of mind.'
+        }
+      ],
+      gallery: [
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Sensory Preferences.png', label: 'Sensory Sensitivity Preferences' },
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Sensory Toggle.png', label: 'Google Maps Sensory Mode Toggle' },
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Map with Environmental Overlay (Heatmap).png', label: 'Live Acoustic & Light Heatmap' },
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Map with Environmental Overlays 1.png', label: 'Acoustic Decibel Heatmap' },
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Map with Environmental Overlays 2.png', label: 'Crowd Density Overlays' },
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Route Selection.png', label: 'Calm vs Fast Route Selection' },
+        { src: 'assets/images/casestudy/sensory mapping/Sensory Toggle/Navigation with Smart Alerts.png', label: 'Turn-by-Turn Sensory Alerts' },
+        { src: 'assets/images/casestudy/sensory mapping/comparison screens/New added feature screen.png', label: 'Before & After Comparison View' }
+      ]
+    },
+
+    // Project 6 (Case Study): Google Pay Spend Indicator
+    gpay: {
+      title: 'Google Pay — "Today\'s Spend" Mindfulness Feature',
+      tagline: 'Embedding ambient daily spending awareness directly into payment confirmation screens to curb unconscious impulse spending without demanding manual budgeting.',
+      role: 'FinTech UX Researcher & Product Designer',
+      timeline: 'FinTech Behavioral Case Study · 4 Weeks',
+      platform: 'Google Pay Android / iOS Concept',
+      category: 'casestudy',
+      heroImage: 'assets/images/casestudy/G-pay/camparsion/New feature added version.png',
+      metrics: [
+        { value: '63%', label: 'Less Impulse Spend' },
+        { value: '0s', label: 'Setup Time' },
+        { value: '82%', label: 'Financial Clarity' }
+      ],
+      sections: [
+        {
+          heading: '01. The UPI Frictionless Spending Paradox',
+          content: 'UPI and QR contactless payments made financial transactions completely frictionless. However, removing physical cash tactile friction created a psychological side effect: users lose track of micro-spending across food, cabs, and impulsive small purchases throughout the day.'
+        },
+        {
+          heading: '02. Behavioral Nudge at the Point of Decision',
+          content: 'Traditional budgeting apps fail because they require manual transaction logging. Our solution embeds an ambient "Today’s Spend" counter directly on the payment amount entry and camera scan screen, providing instantaneous awareness right before entering UPI PIN.'
+        },
+        {
+          heading: '03. Dynamic Visual Feedback without Guilt',
+          content: 'The spend tag uses soft neutral tones that gently shift to warm amber when daily average thresholds are approached. It avoids punitive negative messaging, instead offering constructive mindfulness: "You\'ve spent ₹640 today across 4 transactions."'
+        },
+        {
+          heading: '04. User Validation & Behavioral Impact',
+          content: 'Usability testing with 20 young working professionals demonstrated a 63% decrease in unintended impulse micro-transactions, with 95% stating they preferred the ambient indicator over complex third-party budgeting spreadsheets.'
+        }
+      ],
+      gallery: [
+        { src: 'assets/images/casestudy/G-pay/gpay screen/google pay 1.png', label: 'Scanner & Contact Pay Flow' },
+        { src: 'assets/images/casestudy/G-pay/camparsion/New feature added version.png', label: 'Ambient "Today Spend" Counter' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/2.png', label: 'Payment Entry Screen' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/3.png', label: 'Dynamic Budget Limit Nudge' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/4.png', label: 'Real-Time Total Update' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/5.png', label: 'Quick Category Breakdown' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/6.png', label: 'Daily Milestone Micro-Cheer' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/7.png', label: 'Weekly Trend Sparkline' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/8.png', label: 'Payment Success & Daily Summary' },
+        { src: 'assets/images/casestudy/G-pay/gpay screen/9.png', label: 'Mindful Spending History' }
       ]
     }
   };
@@ -747,11 +942,42 @@
   }
 
   // =========================================================================
-  // 7. Case Study Deep-Dive Modal
+  // =========================================================================
+  // 7. Case Study Deep-Dive Modal with Full UI Screen Gallery & Lightbox
   // =========================================================================
   const modalOverlay = document.getElementById('caseStudyModal');
   const modalBody = document.querySelector('.modal-content-body');
   const modalCloseBtn = document.querySelector('.modal-close-btn');
+
+  // Create Screen Zoom Lightbox Element if not exists
+  let zoomOverlay = document.querySelector('.screen-zoom-overlay');
+  if (!zoomOverlay) {
+    zoomOverlay = document.createElement('div');
+    zoomOverlay.className = 'screen-zoom-overlay';
+    zoomOverlay.innerHTML = `
+      <div class="screen-zoom-content">
+        <img class="screen-zoom-img" src="" alt="Full Resolution UI Screen">
+        <div class="screen-zoom-caption"></div>
+      </div>
+    `;
+    document.body.appendChild(zoomOverlay);
+
+    zoomOverlay.addEventListener('click', () => {
+      zoomOverlay.classList.remove('active');
+    });
+  }
+
+  function openLightbox(src, label) {
+    if (!zoomOverlay) return;
+    const img = zoomOverlay.querySelector('.screen-zoom-img');
+    const cap = zoomOverlay.querySelector('.screen-zoom-caption');
+    if (img && cap) {
+      img.src = src;
+      img.alt = label;
+      cap.textContent = `❖ ${label} • Tap anywhere to close`;
+      zoomOverlay.classList.add('active');
+    }
+  }
 
   function openCaseModal(caseId) {
     const data = CASE_STUDIES[caseId];
@@ -781,12 +1007,39 @@
       `).join('');
     }
 
+    let galleryHtml = '';
+    if (data.gallery && data.gallery.length > 0) {
+      galleryHtml = `
+        <div style="border-top: 1px solid var(--ink-100); padding-top: 32px; margin-top: 32px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+            <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--ink-900);">
+              📱 Complete UI Screens &amp; User Flow (${data.gallery.length} Screens)
+            </h3>
+            <span style="font-size: 13px; color: var(--coral); font-weight: 600;">✦ Click any screen to zoom in full size</span>
+          </div>
+          <p style="font-size: 14px; color: var(--ink-500); margin-bottom: 20px;">
+            Authentic production screens designed in Figma with pixel-perfect layouts, accessible color contrast tokens, and interactive bottom sheets.
+          </p>
+          <div class="modal-screens-grid">
+            ${data.gallery.map((item) => `
+              <div class="modal-screen-item" data-src="${item.src}" data-label="${item.label}" title="Click to view full screen">
+                <img src="${item.src}" alt="${item.label}" loading="lazy">
+                <div class="screen-label">${item.label}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    const badgeCategory = data.category === 'internship' ? '💼 Nexzware Internship Project' : '🎓 UX Research Case Study';
+
     modalBody.innerHTML = `
       <div style="margin-bottom: 24px;">
-        <span class="section-tag" style="margin-bottom: 8px;">CASE STUDY DEEP DIVE</span>
-        <h2 style="font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--ink-900); line-height: 1.2;">${data.title}</h2>
-        <p style="font-size: 16px; color: var(--ink-500); margin-top: 8px;">${data.tagline}</p>
-        <div style="display: flex; gap: 16px; margin-top: 14px; font-size: 13px; color: var(--ink-500); flex-wrap: wrap;">
+        <span class="section-tag" style="margin-bottom: 8px;">${badgeCategory}</span>
+        <h2 style="font-family: var(--font-display); font-size: 30px; font-weight: 800; color: var(--ink-900); line-height: 1.25;">${data.title}</h2>
+        <p style="font-size: 16px; color: var(--ink-600); margin-top: 10px; line-height: 1.6;">${data.tagline}</p>
+        <div style="display: flex; gap: 16px; margin-top: 16px; font-size: 13px; color: var(--ink-500); flex-wrap: wrap;">
           <span><strong>Role:</strong> ${data.role}</span>
           <span>•</span>
           <span><strong>Timeline:</strong> ${data.timeline}</span>
@@ -795,8 +1048,8 @@
         </div>
       </div>
 
-      <div style="width: 100%; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <img src="${data.heroImage}" alt="${data.title}" style="width: 100%; display: block; object-fit: cover;">
+      <div style="width: 100%; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 32px; box-shadow: 0 12px 36px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.06);">
+        <img src="${data.heroImage}" alt="${data.title}" style="width: 100%; display: block; max-height: 520px; object-fit: contain; background: #faf5ef; padding: 20px 0;">
       </div>
 
       ${metricsHtml}
@@ -805,14 +1058,25 @@
         ${sectionsHtml}
       </div>
 
-      <div style="margin-top: 40px; padding: 24px; background: var(--bg-subtle); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      ${galleryHtml}
+
+      <div style="margin-top: 40px; padding: 26px; background: var(--bg-subtle); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border: 1px solid rgba(0,0,0,0.05);">
         <div>
-          <h4 style="font-size: 15px; font-weight: 700; color: var(--ink-900);">Interested in the full Figma file &amp; specs?</h4>
-          <p style="font-size: 13px; color: var(--ink-500);">Full component system &amp; user journey flows available upon request.</p>
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--ink-900);">Want to inspect the full Figma design system or prototype?</h4>
+          <p style="font-size: 13.5px; color: var(--ink-500); margin-top: 4px;">Component architecture, auto-layout tokens, and interactive flows available for review.</p>
         </div>
-        <a href="#contact" onclick="document.getElementById('caseStudyModal').classList.remove('active'); document.body.style.overflow = '';" class="btn-primary">Request Access →</a>
+        <a href="#contact" onclick="document.getElementById('caseStudyModal').classList.remove('active'); document.body.style.overflow = '';" class="btn-primary">Connect with Sowmiya →</a>
       </div>
     `;
+
+    // Attach click-to-zoom on screen items in modal
+    modalBody.querySelectorAll('.modal-screen-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.dataset.src;
+        const label = item.dataset.label;
+        openLightbox(src, label);
+      });
+    });
 
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -832,27 +1096,278 @@
     });
   }
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeCaseModal();
+    if (e.key === 'Escape') {
+      if (zoomOverlay && zoomOverlay.classList.contains('active')) {
+        zoomOverlay.classList.remove('active');
+      } else {
+        closeCaseModal();
+      }
+    }
   });
 
-  // Attach to project buttons
-  document.querySelectorAll('[data-open-case]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const caseId = btn.dataset.openCase;
-      openCaseModal(caseId);
+  // Attach to project buttons dynamically
+  function attachCaseButtons() {
+    document.querySelectorAll('[data-open-case]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const caseId = btn.dataset.openCase;
+        openCaseModal(caseId);
+      });
     });
-  });
+  }
 
   // =========================================================================
-  // 8. Copy Email to Clipboard & Mobile Navigation
+  // 8. Projects Filter Tabs (All / Internship / Case Studies)
+  // =========================================================================
+  function initProjectFilters() {
+    const filterBtns = document.querySelectorAll('.filter-tab-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('is-hidden');
+            card.style.opacity = '0';
+            setTimeout(() => {
+              card.style.opacity = '1';
+            }, 30);
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // =========================================================================
+  // 9. Interactive Before / After Comparison Tabs Switcher
+  // =========================================================================
+  const COMPARISONS = {
+    bms_slots: {
+      title: 'BookMyShow • Legacy 1 Slot vs AI 2 Slots',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/Before 1 time slot.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/Theater and timing/After AI 2 time slot.png',
+      beforeBadge: '⚠️ Before: Single Time Slot Constraint',
+      afterBadge: '⚡ After: AI Multi-Slot Smart Fallback',
+      insights: [
+        { icon: '⚡', title: 'Cognitive Friction Elimination', desc: 'By allowing users to set a secondary fallback time slot upfront, drop-off drops from 48% to 12% when high-demand seats sell out.' },
+        { icon: '💡', title: 'Real-Time User Feedback', desc: 'Ambient visual cues and clear status chips inform users about seat availability before proceeding to checkout.' },
+        { icon: '🎯', title: 'Conversion & Task Success', desc: 'Users complete ticket booking in 3.2 seconds on average, with 91% adopting automated fallback preferences.' }
+      ]
+    },
+    sensory_route: {
+      title: 'Sensory Mapping • Standard Route vs Environmental Overlay',
+      beforeImg: 'assets/images/casestudy/sensory mapping/comparison screens/Og screen.jpeg',
+      afterImg: 'assets/images/casestudy/sensory mapping/comparison screens/New added feature screen.png',
+      beforeBadge: '🚗 Before: Standard Google Maps Route',
+      afterBadge: '🌿 After: Sound & Crowd Heatmap Overlay',
+      insights: [
+        { icon: '🌿', title: 'Calm Sensory Navigation', desc: 'Highlights low-decibel, shaded pathways for neurodiverse and sensory-sensitive pedestrians.' },
+        { icon: '🎨', title: 'Acoustic & Glare Heatmaps', desc: 'Intuitive color-graded overlays indicate construction noise hotspots and high crowd congestion in real-time.' },
+        { icon: '🛡️', title: 'Advance Proactive Alerts', desc: 'Sensory smart notifications alert users 200m before loud zones with 1-tap rerouting options.' }
+      ]
+    },
+    gpay_spend: {
+      title: 'Google Pay • Standard Payment vs Today\'s Spend Indicator',
+      beforeImg: 'assets/images/casestudy/G-pay/camparsion/old version.png',
+      afterImg: 'assets/images/casestudy/G-pay/camparsion/New feature added version.png',
+      beforeBadge: '⚪ Before: Static Payment Amount Only',
+      afterBadge: '💡 After: Today\'s Spend Awareness Tag',
+      insights: [
+        { icon: '💡', title: 'Zero-Friction Behavioral Nudge', desc: 'Ambient daily spending total is visible at the instant of payment entry, preventing impulse buys without manual budgeting.' },
+        { icon: '🌱', title: 'Non-Punitive Mindfulness', desc: 'Soft pastel badges gently turn warm amber when daily limits approach, keeping budgeting constructive rather than stressful.' },
+        { icon: '📊', title: '63% Impulse Reduction', desc: 'Usability testing demonstrated a 63% decrease in unintended impulse micro-transactions across test cohorts.' }
+      ]
+    },
+    bms_payment: {
+      title: 'BookMyShow • Manual Payment vs AI Autopay Pre-authorization',
+      beforeImg: 'assets/images/casestudy/Bookmyshow/payment/Before payment.png',
+      afterImg: 'assets/images/casestudy/Bookmyshow/payment/After New feature auto payment.png',
+      beforeBadge: '⏳ Before: Manual Gateway Redirect Checkout',
+      afterBadge: '🚀 After: 1-Tap UPI/Debit Pre-Authorized Autopay',
+      insights: [
+        { icon: '🚀', title: '1-Tap Fast Checkout', desc: 'Pre-authorizes UPI / Debit mandate before booking opens so high-demand tickets are locked in instantaneously.' },
+        { icon: '🔒', title: 'Zero Deduction Guarantee', desc: 'Funds are securely escrowed and only debited when ticket generation is verified by the theater server.' },
+        { icon: '📈', title: '91% Autopay Adoption', desc: 'Eliminates 90-second gateway wait times and payment session timeouts during blockbuster ticket launches.' }
+      ]
+    }
+  };
+
+  function initComparisonTabs() {
+    const compTabs = document.querySelectorAll('.comp-tab-btn');
+    const compBeforeImg = document.getElementById('compBeforeImg');
+    const compAfterImg = document.getElementById('compAfterImg');
+    const compBeforeBadge = document.getElementById('compBeforeBadge');
+    const compAfterBadge = document.getElementById('compAfterBadge');
+    const compViewerTitle = document.getElementById('compViewerTitle');
+
+    if (!compTabs.length || !compBeforeImg || !compAfterImg) return;
+
+    compTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        compTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const key = tab.dataset.comp;
+        const config = COMPARISONS[key];
+        if (!config) return;
+
+        // Smooth fade swap
+        compBeforeImg.style.opacity = '0.3';
+        compAfterImg.style.opacity = '0.3';
+
+        setTimeout(() => {
+          compBeforeImg.src = config.beforeImg;
+          compAfterImg.src = config.afterImg;
+          if (compBeforeBadge) compBeforeBadge.textContent = config.beforeBadge;
+          if (compAfterBadge) compAfterBadge.textContent = config.afterBadge;
+          if (compViewerTitle) compViewerTitle.textContent = config.title;
+
+          // Update insights
+          if (config.insights) {
+            config.insights.forEach((ins, i) => {
+              const iconEl = document.getElementById(`insightIcon${i + 1}`);
+              const titleEl = document.getElementById(`insightTitle${i + 1}`);
+              const descEl = document.getElementById(`insightDesc${i + 1}`);
+              if (iconEl) iconEl.textContent = ins.icon;
+              if (titleEl) titleEl.textContent = ins.title;
+              if (descEl) descEl.textContent = ins.desc;
+            });
+          }
+
+          compBeforeImg.style.opacity = '1';
+          compAfterImg.style.opacity = '1';
+        }, 150);
+      });
+    });
+  }
+
+  // =========================================================================
+  // 10. Cute & Soft Figma-Themed Interactive Animations
+  // =========================================================================
+  function initCuteFigmaInteractions() {
+    // 1. Live Multiplayer Figma Cursor
+    const cursor = document.createElement('div');
+    cursor.className = 'figma-live-cursor';
+    cursor.innerHTML = `
+      <svg class="figma-cursor-icon" viewBox="0 0 17 17" fill="none">
+        <path d="M1 1L6.5 15.5L9.5 9.5L15.5 6.5L1 1Z" fill="#0D99FF" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+      <div class="figma-cursor-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-label">❖ Sowmiya • Designing ♡</span>
+      </div>
+    `;
+    document.body.appendChild(cursor);
+
+    let mouseX = -100, mouseY = -100;
+    let cursorX = -100, cursorY = -100;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!cursor.classList.contains('visible')) {
+        cursor.classList.add('visible');
+      }
+    });
+
+    window.addEventListener('mousedown', () => {
+      cursor.classList.add('clicking');
+    });
+
+    window.addEventListener('mouseup', () => {
+      cursor.classList.remove('clicking');
+    });
+
+    // Smooth cursor interpolation
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.22;
+      cursorY += (mouseY - cursorY) * 0.22;
+      cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+      requestAnimationFrame(animateCursor);
+    }
+    requestAnimationFrame(animateCursor);
+
+    // Playful cursor messages on hovering interactive elements
+    const badgeLabel = cursor.querySelector('.badge-label');
+
+    const hoverMessages = [
+      { selector: '.project-card', text: '❖ Inspecting UI Screen (412×917)' },
+      { selector: '.btn-primary', text: '❖ 1-Click Prototype Preview ✨' },
+      { selector: '.comp-tab-btn', text: '❖ Comparing UX Solutions 📐' },
+      { selector: '.filter-tab-btn', text: '❖ Filtering Components 🎨' },
+      { selector: '.token-palette-card', text: '❖ WCAG AAA Color Tokens ♡' },
+      { selector: '.affinity-board-card', text: '❖ Affinity Research Synthesis 💛' },
+      { selector: '.nav-resume-btn', text: '❖ Download Sowmiya Resume PDF 📄' }
+    ];
+
+    hoverMessages.forEach(({ selector, text }) => {
+      document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if (badgeLabel) badgeLabel.textContent = text;
+        });
+        el.addEventListener('mouseleave', () => {
+          if (badgeLabel) badgeLabel.textContent = '❖ Sowmiya • Designing ♡';
+        });
+      });
+    });
+
+    // 2. Add cute Figma dimension pills to each project card
+    document.querySelectorAll('.project-card').forEach((card) => {
+      const dim = document.createElement('div');
+      dim.className = 'figma-dimension-tag';
+      dim.innerHTML = `<span>❖</span> Auto-Layout • 412 × 917 • R:24px`;
+      card.appendChild(dim);
+    });
+
+    // 3. Cute Reaction Burst Particle Emitter on Case Study click
+    const cuteEmojis = ['❖', '✨', '💖', '🌸', '📐', '🎨', '💡', '✦'];
+
+    document.querySelectorAll('[data-open-case]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        triggerFigmaBurst(e.clientX, e.clientY);
+      });
+    });
+
+    function triggerFigmaBurst(x, y) {
+      for (let i = 0; i < 8; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'figma-particle-reaction';
+        particle.textContent = cuteEmojis[Math.floor(Math.random() * cuteEmojis.length)];
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+
+        const angle = (Math.PI * 2 * i) / 8 + (Math.random() - 0.5) * 0.5;
+        const dist = 50 + Math.random() * 60;
+        const dx = Math.cos(angle) * dist;
+        const dy = Math.sin(angle) * dist - 20;
+        const rot = (Math.random() - 0.5) * 60;
+
+        particle.style.setProperty('--dx', `${dx}px`);
+        particle.style.setProperty('--dy', `${dy}px`);
+        particle.style.setProperty('--rot', `${rot}deg`);
+
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 1900);
+      }
+    }
+  }
+
+  // =========================================================================
+  // 11. Copy Email to Clipboard & Mobile Navigation
   // =========================================================================
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      const email = 'sowmiya.design@gmail.com';
+      const email = 'sowmiyasoms747@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
-        showDeskToast('Email copied to clipboard! 📬', window.innerWidth / 2, window.innerHeight / 2);
+        showDeskToast('Email copied to clipboard! 📬 sowmiyasoms747@gmail.com', window.innerWidth / 2, window.innerHeight / 2);
         copyEmailBtn.textContent = 'Copied! ✓';
         setTimeout(() => {
           copyEmailBtn.innerHTML = 'Copy Email <span>📋</span>';
@@ -877,7 +1392,7 @@
   }
 
   // =========================================================================
-  // 9. Hero Parallax Scrolling & 3D Interactive Motion
+  // 12. Hero Parallax Scrolling & 3D Interactive Motion
   // =========================================================================
   function initParallax() {
     const heroSection = document.getElementById('heroSection');
@@ -948,7 +1463,7 @@
   }
 
   // =========================================================================
-  // 10. Initialization
+  // 13. Initialization
   // =========================================================================
   document.addEventListener('DOMContentLoaded', () => {
     initHotspots();
@@ -956,6 +1471,10 @@
     initSplitSlider();
     initAffinityBoard();
     initParallax();
+    attachCaseButtons();
+    initProjectFilters();
+    initComparisonTabs();
+    initCuteFigmaInteractions();
   });
 
 })();
