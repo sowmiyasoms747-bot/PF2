@@ -1121,7 +1121,7 @@
   // =========================================================================
   function initProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-tab-btn');
-    const cards = document.querySelectorAll('.project-card');
+    const cards = document.querySelectorAll('.project-card.stack-card');
 
     filterBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -1139,10 +1139,95 @@
             }, 30);
           } else {
             card.classList.add('is-hidden');
+            card.style.transform = 'translate3d(0, 0, 0) scale(1)';
+            card.style.filter = 'none';
           }
         });
+
+        // Re-number visible card stack pills dynamically (e.g. 01 / 03)
+        const visibleCards = Array.from(document.querySelectorAll('#cardsStackDeck .project-card.stack-card:not(.is-hidden)'));
+        visibleCards.forEach((c, idx) => {
+          const pill = c.querySelector('.card-stack-index-pill');
+          if (pill) {
+            const num = (idx + 1).toString().padStart(2, '0');
+            const total = visibleCards.length.toString().padStart(2, '0');
+            pill.textContent = `${num} / ${total}`;
+          }
+        });
+
+        if (window.updateCardStack) {
+          setTimeout(window.updateCardStack, 60);
+        }
       });
     });
+  }
+
+  // =========================================================================
+  // 8b. Stacked Cards Parallax Deck Controller
+  // =========================================================================
+  function initStackedCardsParallax() {
+    const deck = document.getElementById('cardsStackDeck');
+    if (!deck) return;
+
+    let isUpdating = false;
+
+    window.updateCardStack = function () {
+      const cards = Array.from(deck.querySelectorAll('.project-card.stack-card:not(.is-hidden)'));
+      if (cards.length === 0) return;
+
+      const viewportHeight = window.innerHeight;
+      const stickyThreshold = Math.max(75, Math.min(105, viewportHeight * 0.11));
+
+      cards.forEach((card, idx) => {
+        const nextCard = cards[idx + 1];
+
+        if (nextCard) {
+          const nextRect = nextCard.getBoundingClientRect();
+          const cardRect = card.getBoundingClientRect();
+          const overlapDistance = cardRect.bottom - nextRect.top;
+          const activeRange = cardRect.height * 0.9;
+
+          if (nextRect.top < cardRect.bottom && nextRect.top > stickyThreshold) {
+            // Next card is actively sliding up and stacking over this card
+            const progress = Math.min(1, Math.max(0, overlapDistance / activeRange));
+            const scale = 1 - progress * 0.055; // Scales from 1.00 down to 0.945
+            const translateY = -progress * 16; // Smooth upward parallax tuck
+            const brightness = 1 - progress * 0.14; // Soft physical shadow dimming
+            const blur = progress * 1.2;
+
+            card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale.toFixed(4)})`;
+            card.style.filter = `brightness(${brightness.toFixed(3)}) blur(${blur.toFixed(1)}px)`;
+          } else if (nextRect.top <= stickyThreshold) {
+            // Next card has fully locked over this card
+            card.style.transform = `translate3d(0, -16px, 0) scale(0.945)`;
+            card.style.filter = `brightness(0.86) blur(1.2px)`;
+          } else {
+            // Next card has not reached this card yet
+            card.style.transform = 'translate3d(0, 0, 0) scale(1)';
+            card.style.filter = 'none';
+          }
+        } else {
+          // Last card in the active stack
+          card.style.transform = 'translate3d(0, 0, 0) scale(1)';
+          card.style.filter = 'none';
+        }
+      });
+
+      isUpdating = false;
+    };
+
+    function onScroll() {
+      if (!isUpdating) {
+        requestAnimationFrame(window.updateCardStack);
+        isUpdating = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+
+    // Initial pass
+    window.updateCardStack();
   }
 
   // =========================================================================
@@ -1473,6 +1558,7 @@
     initParallax();
     attachCaseButtons();
     initProjectFilters();
+    initStackedCardsParallax();
     initComparisonTabs();
     initCuteFigmaInteractions();
   });
