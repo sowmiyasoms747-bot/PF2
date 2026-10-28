@@ -1403,13 +1403,6 @@
       });
     });
 
-    // 2. Add cute Figma dimension pills to each project card
-    document.querySelectorAll('.project-card').forEach((card) => {
-      const dim = document.createElement('div');
-      dim.className = 'figma-dimension-tag';
-      dim.innerHTML = `<span>❖</span> Auto-Layout • 412 × 917 • R:24px`;
-      card.appendChild(dim);
-    });
 
     // 3. Cute Reaction Burst Particle Emitter on Case Study click
     const cuteEmojis = ['❖', '✨', '💖', '🌸', '📐', '🎨', '💡', '✦'];
